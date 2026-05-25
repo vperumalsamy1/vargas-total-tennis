@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" width="56" height="64" role="img" aria-label="Vargas Total Tennis shield icon">
+  <!-- Shield only — for favicon and small-use contexts -->
+  <g transform="translate(2, 4)">
+    <path d="M4 0 L48 0 Q52 0 52 4 L52 30 Q52 44 26 52 Q0 44 0 30 L0 4 Q0 0 4 0 Z" fill="#1D9E75"/>
+    <text x="26" y="35" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">V</text>
+  </g>
+</svg>

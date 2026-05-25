@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1a1a1a;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+}
+
+@layer components {
+  /* Reusable section label — small all-caps green eyebrow text */
+  .section-label {
+    @apply text-xs font-medium uppercase text-vtt-primary;
+    letter-spacing: 0.07em;
+  }
+
+  /* Card base — subtle border, rounded, no heavy shadow */
+  .card {
+    @apply rounded-xl bg-white;
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-vtt-primary hover:bg-vtt-dark text-white font-medium px-6 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-current font-medium px-6 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+}

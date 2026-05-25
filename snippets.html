@@ -1,0 +1,361 @@
+<!-- ============================================================
+     VARGAS TOTAL TENNIS — Squarespace Code Block Snippets
+     Paste each snippet into a separate Code Block in Squarespace.
+     Instructions for each snippet are in the comments.
+     ============================================================ -->
+
+
+<!-- ============================================================
+     SNIPPET 1: ANNOUNCEMENT BAR
+     Where to add: Pages → Home → Add Block → Code (at the very
+     top of the page, above all other sections).
+     What it does: Sticky green banner with a dismiss button.
+     ============================================================ -->
+
+<style>
+  #vtt-announcement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #1D9E75;
+    color: #ffffff;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 48px 10px 16px;
+    line-height: 1.4;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  #vtt-announcement a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  #vtt-announcement a:hover {
+    opacity: 0.85;
+  }
+
+  #vtt-announcement-close {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 6px;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+  }
+
+  #vtt-announcement-close:hover {
+    opacity: 1;
+  }
+
+  #vtt-announcement.dismissed {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Push page content down so bar doesn't overlap */
+  body.vtt-bar-visible {
+    padding-top: 40px;
+  }
+</style>
+
+<div id="vtt-announcement" role="banner" aria-label="Announcement">
+  🎾 Now enrolling for Summer 2026 &nbsp;·&nbsp;
+  <a href="#contact">Book a free trial lesson →</a>
+  <button id="vtt-announcement-close" aria-label="Dismiss announcement">×</button>
+</div>
+
+<script>
+  (function () {
+    var bar = document.getElementById('vtt-announcement');
+    var closeBtn = document.getElementById('vtt-announcement-close');
+
+    if (!bar) return;
+
+    // Don't show bar if dismissed this session
+    if (sessionStorage.getItem('vtt-bar-dismissed')) {
+      bar.style.display = 'none';
+      return;
+    }
+
+    document.body.classList.add('vtt-bar-visible');
+
+    closeBtn.addEventListener('click', function () {
+      bar.classList.add('dismissed');
+      document.body.classList.remove('vtt-bar-visible');
+      sessionStorage.setItem('vtt-bar-dismissed', '1');
+    });
+
+    // Also add nav scroll class used by Custom CSS (section 6)
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 60) {
+        document.body.classList.add('nav-scrolled');
+      } else {
+        document.body.classList.remove('nav-scrolled');
+      }
+    });
+  })();
+</script>
+
+<!-- END SNIPPET 1 -->
+
+
+
+
+<!-- ============================================================
+     SNIPPET 2: ANIMATED STATS ROW
+     Where to add: Hero section or a standalone section below
+     the hero. Add as a Code Block inside a full-width section
+     with a dark green background (#085041).
+     What it does: Four numbers count up when scrolled into view.
+     ============================================================ -->
+
+<style>
+  #vtt-stats {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 40px 24px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .vtt-stat {
+    flex: 1 1 140px;
+    text-align: center;
+    padding: 24px 16px;
+    border: 0.5px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    min-width: 130px;
+  }
+
+  .vtt-stat-number {
+    display: block;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    transition: none;
+  }
+
+  .vtt-stat-label {
+    display: block;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 8px;
+  }
+</style>
+
+<div id="vtt-stats" aria-label="Coaching stats">
+  <div class="vtt-stat">
+    <span class="vtt-stat-number" data-target="10" data-suffix="+">0</span>
+    <span class="vtt-stat-label">Years Coaching</span>
+  </div>
+  <div class="vtt-stat">
+    <span class="vtt-stat-number" data-target="5.0" data-suffix="★" data-decimal="1">0</span>
+    <span class="vtt-stat-label">Average Rating</span>
+  </div>
+  <div class="vtt-stat">
+    <span class="vtt-stat-number" data-target="100" data-suffix="+">0</span>
+    <span class="vtt-stat-label">Students Coached</span>
+  </div>
+  <div class="vtt-stat">
+    <span class="vtt-stat-number" data-target="5" data-suffix="yrs+">0</span>
+    <span class="vtt-stat-label">Junior Programs</span>
+  </div>
+</div>
+
+<script>
+  (function () {
+    function animateStat(el) {
+      var target = parseFloat(el.getAttribute('data-target'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var isDecimal = el.hasAttribute('data-decimal');
+      var decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+      var duration = 1400;
+      var start = null;
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = Math.min((timestamp - start) / duration, 1);
+        // Ease out cubic
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = eased * target;
+        el.textContent = current.toFixed(decimals) + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    var statsSection = document.getElementById('vtt-stats');
+    if (!statsSection) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var numbers = entry.target.querySelectorAll('.vtt-stat-number');
+          numbers.forEach(animateStat);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(statsSection);
+  })();
+</script>
+
+<!-- END SNIPPET 2 -->
+
+
+
+
+<!-- ============================================================
+     SNIPPET 3: CALENDLY BOOKING BUTTON
+     Where to add: Hero section, Programs section, or Contact
+     section — anywhere a prominent booking CTA is needed.
+     What it does: Green button that opens Calendly in a popup.
+     [UPDATE: replace the Calendly URL below with Nestor's real link]
+     ============================================================ -->
+
+<style>
+  .vtt-calendly-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  .vtt-calendly-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1D9E75;
+    color: #ffffff;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.18s ease, transform 0.15s ease;
+  }
+
+  .vtt-calendly-btn:hover {
+    background-color: #0F6E56;
+    transform: translateY(-2px);
+    color: #ffffff;
+  }
+
+  .vtt-calendly-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+</style>
+
+<!-- Calendly popup embed script — loads once regardless of how many buttons are on the page -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<div class="vtt-calendly-wrap">
+  <button
+    class="vtt-calendly-btn"
+    onclick="Calendly.initPopupWidget({url:'https://calendly.com/coachnestorvargas'});return false;"
+  >
+    <!-- Calendar icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zM7 10h5v5H7z"/></svg>
+    Book a free trial lesson
+  </button>
+</div>
+
+<!-- [UPDATE: Replace https://calendly.com/coachnestorvargas with Nestor's real Calendly link] -->
+
+<!-- END SNIPPET 3 -->
+
+
+
+
+<!-- ============================================================
+     SNIPPET 4: GOOGLE MAPS EMBED
+     Where to add: Contact section, as a Code Block alongside
+     the contact form.
+     What it does: Embedded map of Tampa, FL.
+     [UPDATE: Generate a real embed URL from Google Maps using
+      Nestor's exact facility address. Go to maps.google.com,
+      search the address, click Share → Embed a map, copy the
+      src URL from the <iframe> code, and paste it below.]
+     ============================================================ -->
+
+<style>
+  .vtt-map-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .vtt-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: none;
+  }
+
+  .vtt-map-caption {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+  }
+</style>
+
+<div class="vtt-map-wrap">
+  <!--
+    [UPDATE: Replace the src URL below with Nestor's exact Google Maps embed URL.
+    Steps: maps.google.com → search address → Share → Embed a map → Copy iframe src]
+  -->
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112675.8165987!2d-82.52151!3d27.99419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1716000000000"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Vargas Total Tennis location — Tampa, FL [UPDATE: update with exact address]"
+  ></iframe>
+</div>
+<p class="vtt-map-caption">
+  📍 Tampa Bay, FL &nbsp;·&nbsp; <strong>[UPDATE: add exact address]</strong>
+</p>
+
+<!-- END SNIPPET 4 -->

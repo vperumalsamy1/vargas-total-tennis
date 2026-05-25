@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Vargas Total Tennis logo — white variant">
+  <!-- Shield mark (lighter green for dark backgrounds) -->
+  <g transform="translate(0, 4)">
+    <path d="M8 4 L48 4 Q52 4 52 8 L52 34 Q52 48 28 56 Q4 48 4 34 L4 8 Q4 4 8 4 Z" fill="#5DCAA5"/>
+    <text x="28" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">V</text>
+  </g>
+  <!-- Wordmark group — all white for dark green backgrounds -->
+  <g transform="translate(64, 0)">
+    <text
+      x="0" y="30"
+      font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+      font-size="20"
+      font-weight="500"
+      fill="white"
+      letter-spacing="-0.3"
+      dominant-baseline="auto"
+    >Vargas Total Tennis</text>
+    <text
+      x="0" y="48"
+      font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+      font-size="10"
+      font-weight="400"
+      fill="white"
+      letter-spacing="2"
+      dominant-baseline="auto"
+      opacity="0.7"
+    >TAMPA · FLORIDA</text>
+  </g>
+</svg>

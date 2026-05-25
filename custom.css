@@ -1,0 +1,524 @@
+/* ============================================================
+   VARGAS TOTAL TENNIS — Squarespace Custom CSS
+   Template: Hayden
+   Paste this entire file into Design → Custom CSS
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. GOOGLE FONTS IMPORT
+   Loads DM Sans (weights 400 and 500 only) from Google Fonts.
+   This handles the @import; you should ALSO add the <link>
+   tag in Settings → Advanced → Code Injection for best perf.
+   ------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+
+/* ------------------------------------------------------------
+   2. DESIGN TOKENS (CSS custom properties)
+   Change a color once here and it updates everywhere below.
+   ------------------------------------------------------------ */
+:root {
+  --vtt-primary:   #1D9E75;
+  --vtt-dark:      #0F6E56;
+  --vtt-darker:    #085041;
+  --vtt-light:     #5DCAA5;
+  --vtt-lightest:  #E1F5EE;
+  --vtt-amber:     #EF9F27;
+  --vtt-blue:      #378ADD;
+  --vtt-text:      #1a1a1a;
+  --vtt-muted:     #888888;
+  --vtt-border:    rgba(0, 0, 0, 0.08);
+  --vtt-radius:    10px;
+}
+
+
+/* ------------------------------------------------------------
+   3. GLOBAL TYPOGRAPHY
+   Override Hayden's default fonts with DM Sans throughout.
+   Headings use tighter letter-spacing and compact line-height.
+   ------------------------------------------------------------ */
+body,
+p,
+li,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label {
+  font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sqsrte-large,
+.header-title-text {
+  font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+
+/* ------------------------------------------------------------
+   4. SECTION LABELS
+   Small all-caps green labels above section headings.
+   In Squarespace Hayden, these map to the "eyebrow" text style.
+   ------------------------------------------------------------ */
+.sqsrte-small,
+[data-block-type="text"] p.sqsrte-small,
+.page-section--has-background p:first-child em,
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--vtt-primary);
+}
+
+
+/* ------------------------------------------------------------
+   5. BUTTON OVERRIDES
+   Replace Hayden's default button styles with the green palette.
+   Primary buttons: solid green. Secondary: outline green.
+   ------------------------------------------------------------ */
+.sqs-block-button-element--medium,
+.sqs-block-button-element--large,
+.sqs-block-button-element--small,
+button[type="submit"],
+.sqs-block-button .sqs-block-button-element {
+  background-color: var(--vtt-primary) !important;
+  border-color: var(--vtt-primary) !important;
+  color: #ffffff !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  border-radius: 6px !important;
+  transition: background-color 0.18s ease, transform 0.15s ease !important;
+}
+
+.sqs-block-button-element--medium:hover,
+.sqs-block-button-element--large:hover,
+button[type="submit"]:hover {
+  background-color: var(--vtt-dark) !important;
+  border-color: var(--vtt-dark) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Secondary / outline variant — add class "outline-btn" to button block */
+.sqs-block-button-element.outline-btn {
+  background-color: transparent !important;
+  border: 1.5px solid var(--vtt-primary) !important;
+  color: var(--vtt-primary) !important;
+}
+
+.sqs-block-button-element.outline-btn:hover {
+  background-color: var(--vtt-lightest) !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. NAVBAR
+   Transparent over the hero, transitions to white on scroll.
+   The .scrolled class is added by the JS in the announcement
+   bar snippet (or you can add it separately in Code Injection).
+   ------------------------------------------------------------ */
+#header .header-inner,
+.header-display-desktop {
+  background-color: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Triggered by the scroll listener in snippets.html */
+body.nav-scrolled #header .header-inner,
+body.nav-scrolled .header-display-desktop {
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 var(--vtt-border);
+}
+
+/* Nav link color on transparent state */
+#header .header-nav .header-nav-item a {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+/* Nav links on white scrolled state */
+body.nav-scrolled #header .header-nav .header-nav-item a {
+  color: var(--vtt-darker);
+}
+
+#header .header-nav .header-nav-item a:hover {
+  color: var(--vtt-primary);
+}
+
+/* CTA button in navbar */
+#header .btn,
+.header-actions .sqs-block-button-element {
+  background-color: var(--vtt-primary) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+}
+
+
+/* ------------------------------------------------------------
+   7. HERO SECTION
+   Dark green background, white text. Targets the first
+   full-height section on the home page.
+   ------------------------------------------------------------ */
+.Index-page:first-child .Index-page-content,
+.sqs-layout.hero-section,
+[data-section-theme="dark-green"],
+.page-section.hero {
+  background-color: var(--vtt-darker) !important;
+  color: #ffffff !important;
+}
+
+.page-section.hero h1,
+.page-section.hero h2,
+.page-section.hero p {
+  color: #ffffff;
+}
+
+
+/* ------------------------------------------------------------
+   8. ABOUT & CONTACT SECTIONS — dark green background
+   Apply the Squarespace section background color "custom" and
+   set it via these overrides, or add class "dark-section"
+   to those sections in the page editor.
+   ------------------------------------------------------------ */
+[data-section-theme="darker-green"],
+.page-section.dark-section {
+  background-color: var(--vtt-dark) !important;
+}
+
+.page-section.dark-section h1,
+.page-section.dark-section h2,
+.page-section.dark-section h3,
+.page-section.dark-section p,
+.page-section.dark-section li,
+.page-section.dark-section a {
+  color: #ffffff !important;
+}
+
+.page-section.dark-section .section-label {
+  color: var(--vtt-light) !important;
+}
+
+
+/* ------------------------------------------------------------
+   9. PROGRAM / SERVICE CARDS
+   Adds a colored top accent strip, subtle border, rounded
+   corners, and a hover lift effect.
+   ------------------------------------------------------------ */
+.sqs-block.service-block,
+.sqs-block-summary-v2 .summary-item,
+.program-card {
+  border: 0.5px solid var(--vtt-border);
+  border-radius: var(--vtt-radius);
+  overflow: hidden;
+  padding: 28px 24px;
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.sqs-block.service-block:hover,
+.sqs-block-summary-v2 .summary-item:hover,
+.program-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* Top accent strip — default primary green */
+.sqs-block.service-block::before,
+.summary-item::before,
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--vtt-primary);
+  border-radius: var(--vtt-radius) var(--vtt-radius) 0 0;
+}
+
+/* Amber accent for Junior Academy card — add class "accent-amber" */
+.program-card.accent-amber::before { background-color: var(--vtt-amber); }
+
+/* Blue accent for Tournament Prep card — add class "accent-blue" */
+.program-card.accent-blue::before  { background-color: var(--vtt-blue); }
+
+/* Light green accent for Group Lessons card — add class "accent-light" */
+.program-card.accent-light::before { background-color: var(--vtt-light); }
+
+
+/* ------------------------------------------------------------
+   10. PRICING TABLE
+   Three-column pricing with a featured "Most popular" card.
+   ------------------------------------------------------------ */
+.pricing-card {
+  border: 0.5px solid var(--vtt-border);
+  border-radius: var(--vtt-radius);
+  padding: 32px 28px;
+  background: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Featured card (Private Lesson) — add class "pricing-card--featured" */
+.pricing-card--featured {
+  border: 2px solid var(--vtt-primary);
+  position: relative;
+}
+
+/* "Most popular" badge on the featured card */
+.pricing-card--featured::before {
+  content: 'Most popular';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--vtt-lightest);
+  color: var(--vtt-darker);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Price number styling */
+.pricing-card .price-amount {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--vtt-darker);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.pricing-card .price-period {
+  font-size: 13px;
+  color: var(--vtt-muted);
+}
+
+/* Feature list in pricing cards */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.pricing-card ul li {
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 0.5px solid var(--vtt-border);
+  color: var(--vtt-text);
+}
+
+.pricing-card ul li::before {
+  content: '✓  ';
+  color: var(--vtt-primary);
+  font-weight: 500;
+}
+
+
+/* ------------------------------------------------------------
+   11. TESTIMONIALS
+   Quote text uses Georgia serif italic for credibility.
+   ------------------------------------------------------------ */
+.testimonial-quote,
+.sqs-block-quote blockquote,
+blockquote p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--vtt-darker);
+}
+
+.testimonial-author {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--vtt-muted);
+  margin-top: 12px;
+}
+
+/* Quotation mark accent */
+blockquote::before {
+  content: '\201C';
+  font-size: 48px;
+  line-height: 0;
+  color: var(--vtt-light);
+  vertical-align: -16px;
+  margin-right: 4px;
+  font-family: Georgia, serif;
+}
+
+
+/* ------------------------------------------------------------
+   12. STAT BOXES (hero stats row)
+   Four-column stat grid with number + label layout.
+   ------------------------------------------------------------ */
+.stat-box {
+  text-align: center;
+  padding: 16px 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-box .stat-number {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.stat-box .stat-label {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+
+/* ------------------------------------------------------------
+   13. TRUST BAR
+   Four-column horizontal strip below the hero.
+   ------------------------------------------------------------ */
+.trust-bar {
+  background-color: var(--vtt-lightest);
+  border-bottom: 0.5px solid rgba(29, 158, 117, 0.15);
+  padding: 16px 0;
+}
+
+.trust-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vtt-darker);
+}
+
+.trust-bar-item .trust-icon {
+  font-size: 16px;
+}
+
+
+/* ------------------------------------------------------------
+   14. CONTACT FORM
+   Style the Squarespace form fields to match the brand.
+   ------------------------------------------------------------ */
+.sqs-block-form input[type="text"],
+.sqs-block-form input[type="email"],
+.sqs-block-form input[type="tel"],
+.sqs-block-form textarea,
+.field-element {
+  border: 0.5px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 6px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 15px !important;
+  padding: 12px 14px !important;
+  transition: border-color 0.15s ease !important;
+  background-color: #ffffff !important;
+}
+
+.sqs-block-form input:focus,
+.sqs-block-form textarea:focus,
+.field-element:focus {
+  border-color: var(--vtt-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.12) !important;
+}
+
+/* Form submit button inherits button styles above */
+
+
+/* ------------------------------------------------------------
+   15. FOOTER
+   Clean footer with brand colors.
+   ------------------------------------------------------------ */
+#footer-sections,
+.footer-inner {
+  background-color: var(--vtt-darker) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#footer-sections a,
+.footer-inner a {
+  color: var(--vtt-light) !important;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+#footer-sections a:hover,
+.footer-inner a:hover {
+  color: #ffffff !important;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ------------------------------------------------------------
+   16. MISC UTILITIES
+   Small helpers that may be useful across the site.
+   ------------------------------------------------------------ */
+
+/* Horizontal divider in green */
+.vtt-divider {
+  border: none;
+  border-top: 1px solid var(--vtt-lightest);
+  margin: 40px auto;
+  max-width: 80px;
+}
+
+/* Highlight span — wraps a word in green */
+.vtt-highlight {
+  color: var(--vtt-primary);
+}
+
+/* Remove default Squarespace margin on images in cards */
+.sqs-block-image .image-block-outer-wrapper {
+  margin-bottom: 0;
+}
+
+/* Prevent Squarespace layout engine breakage on mobile */
+@media (max-width: 768px) {
+  .program-card::before,
+  .pricing-card--featured::before {
+    border-radius: var(--vtt-radius) var(--vtt-radius) 0 0;
+  }
+
+  .pricing-card--featured {
+    margin-top: 20px;
+  }
+}
