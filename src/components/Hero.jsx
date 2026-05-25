@@ -2,24 +2,18 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 
-const stats = [
-  { number: '10+',    label: 'Years Coaching' },
-  { number: 'All Ages', label: 'Welcome' },
-  { number: 'SGI',    label: 'Certified' },
-  { number: '⭐ 5.0', label: 'Rating' },
-]
-
-// Helper: staggered fade-up variants for the left column
 const leftVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } },
 }
 const itemVariant = {
-  hidden: { opacity: 0, y: 22 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
+  hidden:   { opacity: 0, y: 22 },
+  visible:  { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 }
 
-export default function Hero() {
+export default function Hero({ content }) {
+  const { eyebrow, headline, subtext, cta_primary, cta_ghost, stats, quote } = content
+
   return (
     <section
       id="hero"
@@ -27,48 +21,46 @@ export default function Hero() {
       style={{ backgroundColor: '#0F6E56', minHeight: '100svh' }}
     >
       <div className="max-w-7xl mx-auto px-6 w-full py-28 md:py-0">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center" style={{ minHeight: 'inherit' }}>
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
           {/* ── Left: headline + CTAs ── */}
-          <motion.div
-            variants={leftVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {/* Eyebrow */}
+          <motion.div variants={leftVariants} initial="hidden" animate="visible">
+
             <motion.p
               variants={itemVariant}
               className="section-label mb-4"
               style={{ color: '#5DCAA5' }}
             >
-              Tampa Bay, Florida
+              {eyebrow}
             </motion.p>
 
-            {/* Headline */}
             <motion.h1
               variants={itemVariant}
               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-medium text-white mb-6"
               style={{ letterSpacing: '-0.025em', lineHeight: 1.15 }}
             >
-              Train smarter.
-              <br />
-              Play better.
-              <br />
-              <span style={{ color: '#5DCAA5' }}>Love the game.</span>
+              {headline.map((line, i) =>
+                i < headline.length - 1 ? (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ) : (
+                  <span key={i} style={{ color: '#5DCAA5' }}>
+                    {line}
+                  </span>
+                )
+              )}
             </motion.h1>
 
-            {/* Subtext */}
             <motion.p
               variants={itemVariant}
               className="text-base md:text-lg leading-relaxed max-w-md mb-8"
               style={{ color: 'rgba(255,255,255,0.72)' }}
             >
-              Year-round private lessons and clinics for all ages — from
-              first-time beginners to advanced tournament players. Based in
-              Tampa Bay, FL.
+              {subtext}
             </motion.p>
 
-            {/* CTAs */}
             <motion.div variants={itemVariant} className="flex flex-wrap gap-3">
               <Link
                 to="contact"
@@ -77,7 +69,7 @@ export default function Hero() {
                 offset={-64}
                 className="inline-flex items-center gap-2 bg-vtt-primary hover:bg-vtt-dark text-white font-medium px-6 py-3.5 rounded-lg cursor-pointer transition-colors duration-200"
               >
-                Book a free trial
+                {cta_primary}
                 <ArrowRight size={15} />
               </Link>
               <Link
@@ -86,23 +78,16 @@ export default function Hero() {
                 duration={500}
                 offset={-64}
                 className="inline-flex items-center gap-2 font-medium px-6 py-3.5 rounded-lg cursor-pointer transition-colors duration-200"
-                style={{
-                  border: '1.5px solid rgba(255,255,255,0.3)',
-                  color: '#fff',
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.65)')
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)')
-                }
+                style={{ border: '1.5px solid rgba(255,255,255,0.3)', color: '#fff' }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.65)')}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)')}
               >
-                View programs
+                {cta_ghost}
               </Link>
             </motion.div>
           </motion.div>
 
-          {/* ── Right: dark panel with stats + quote ── */}
+          {/* ── Right: dark stats panel + quote ── */}
           <motion.div
             initial={{ opacity: 0, x: 28 }}
             animate={{ opacity: 1, x: 0 }}
@@ -111,15 +96,14 @@ export default function Hero() {
             style={{ backgroundColor: '#085041' }}
           >
             <div className="p-7 md:p-8">
-
-              {/* Stats grid 2×2 */}
+              {/* Stats 2×2 */}
               <div className="grid grid-cols-2 gap-3 mb-7">
                 {stats.map((s, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 + i * 0.08, ease: 'easeOut' }}
+                    transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
                     className="rounded-xl p-4 text-center"
                     style={{
                       backgroundColor: 'rgba(255,255,255,0.07)',
@@ -142,7 +126,7 @@ export default function Hero() {
                 ))}
               </div>
 
-              {/* Parent quote */}
+              {/* Quote */}
               <motion.blockquote
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -161,14 +145,10 @@ export default function Hero() {
                     color: 'rgba(255,255,255,0.82)',
                   }}
                 >
-                  "Coach Nestor's drills are unlike anything my son has
-                  experienced. Challenging, fun, and incredibly effective."
+                  "{quote.text}"
                 </p>
-                <p
-                  className="text-xs font-medium"
-                  style={{ color: '#5DCAA5' }}
-                >
-                  — Parent of junior student
+                <p className="text-xs font-medium" style={{ color: '#5DCAA5' }}>
+                  — {quote.attribution}
                 </p>
               </motion.blockquote>
             </div>
@@ -176,7 +156,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Animated scroll indicator */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

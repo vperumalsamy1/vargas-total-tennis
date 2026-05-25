@@ -1,7 +1,9 @@
 # Vargas Total Tennis — React Website
 
 Production-ready React site for Coach Nestor Vargas, Tampa Bay, FL.
-**Stack:** React 18 + Vite · Tailwind CSS · Framer Motion · Lucide React · React Scroll
+**Stack:** React 18 + Vite · Tailwind CSS · Framer Motion · Lucide React · React Scroll · React Router DOM
+
+**Routes:** `/` (English) · `/es` (Spanish) · Language switcher in navbar and footer
 
 ---
 
@@ -63,17 +65,21 @@ vargas-total-tennis/
 │   │   ├── logo.svg           ← Primary logo (light backgrounds)
 │   │   ├── logo-white.svg     ← White logo (dark backgrounds / footer)
 │   │   └── logo-icon.svg      ← Shield only (small uses)
+│   ├── content/
+│   │   ├── en.js              ← All English text (edit here to update EN copy)
+│   │   └── es.js              ← All Spanish text (edit here to update ES copy)
 │   ├── components/
-│   │   ├── Navbar.jsx         ← Transparent → solid scroll transition
+│   │   ├── PageHead.jsx       ← Sets <html lang>, <title>, meta, hreflang per route
+│   │   ├── Navbar.jsx         ← Transparent → solid + EN/ES language toggle
 │   │   ├── Hero.jsx           ← Two-column, load animation
 │   │   ├── TrustBar.jsx       ← 4 trust signals with Lucide icons
 │   │   ├── Programs.jsx       ← 4 program cards, staggered animation
 │   │   ├── About.jsx          ← Coach bio with slide-in animation
 │   │   ├── Testimonials.jsx   ← 3 review cards, Georgia serif quotes
 │   │   ├── Pricing.jsx        ← 3-tier table with featured card
-│   │   ├── Contact.jsx        ← Dark bg, form with validation
-│   │   └── Footer.jsx         ← White logo, nav links, copyright
-│   ├── App.jsx
+│   │   ├── Contact.jsx        ← Dark bg, form with translated validation
+│   │   └── Footer.jsx         ← White logo, nav links, EN/ES toggle
+│   ├── App.jsx                ← BrowserRouter, / and /es routes
 │   ├── main.jsx
 │   └── index.css              ← Tailwind + custom utilities
 ├── index.html                 ← DM Sans font, meta tags
@@ -145,19 +151,36 @@ Search any file for `[UPDATE` to find every placeholder that needs a real value.
 
 ---
 
-## Customising content
+## Updating content (English and Spanish)
 
-All section copy is co-located in each component file — no separate data layer to navigate.
-To update text, open the relevant component and edit the string directly.
+All user-visible text lives in two files — components contain no hardcoded copy.
 
-| Section      | File                              |
+| To update… | Edit this file |
 |---|---|
-| Navbar links | `src/components/Navbar.jsx` — `NAV_LINKS` array |
-| Hero text    | `src/components/Hero.jsx` — JSX copy |
-| Trust signals| `src/components/TrustBar.jsx` — `items` array |
-| Programs     | `src/components/Programs.jsx` — `programs` array |
-| About bio    | `src/components/About.jsx` — JSX copy |
-| Testimonials | `src/components/Testimonials.jsx` — `reviews` array |
-| Pricing      | `src/components/Pricing.jsx` — `tiers` array |
-| Contact info | `src/components/Contact.jsx` — `contactDetails` array |
-| Footer       | `src/components/Footer.jsx` — JSX copy |
+| Any English text | `src/content/en.js` |
+| Any Spanish text | `src/content/es.js` |
+
+Each content file is a single exported JS object with clearly named keys matching each section. Find the key, update the string, save — done.
+
+**Example:** to change the hero headline in Spanish, open `src/content/es.js` and find:
+```js
+headline: ['Entrena mejor.', 'Juega mejor.', 'Ama el deporte.'],
+```
+Edit the strings, save. The last item in the array always renders in the light green accent colour.
+
+**To add a new language:** duplicate `en.js` into `es.js`, translate the values, then add a new `<Route path="/fr" element={<Site content={fr} />} />` in `App.jsx`.
+
+---
+
+## Language routing
+
+| URL | Language | `<html lang>` |
+|---|---|---|
+| `/` | English | `en` |
+| `/es` | Spanish | `es` |
+
+The `EN \| ES` toggle in the Navbar and Footer uses React Router `<NavLink>` to navigate between routes. The active language is highlighted in `#1D9E75` green.
+
+`PageHead.jsx` imperatively updates `document.title`, `<meta name="description">`, `<html lang>`, and `<link rel="alternate" hreflang>` on each route change. No external head-management library needed.
+
+`vercel.json` already has the SPA fallback rewrite — `/es` works correctly after deployment with no extra config.
