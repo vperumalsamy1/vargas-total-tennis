@@ -4,7 +4,7 @@ import { MessageSquare } from 'lucide-react'
 export default function FloatingCTA({ label }) {
   return (
     <motion.a
-      href="sms:8644312442"
+      href="tel:8644312442"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.5, duration: 0.4, ease: 'easeOut' }}

@@ -73,7 +73,7 @@ export default function Hero({ content }) {
                 <ArrowRight size={15} />
               </Link>
               <a
-                href="sms:8644312442"
+                href="tel:8644312442"
                 className="inline-flex items-center gap-2 font-medium px-6 py-3.5 rounded-lg transition-colors duration-200"
                 style={{ border: '1.5px solid rgba(255,255,255,0.3)', color: '#fff' }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.65)')}
