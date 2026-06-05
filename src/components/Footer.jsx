@@ -13,7 +13,7 @@ export default function Footer({ content }) {
   const isSpanish = pathname === '/es'
   const footerLinks = isSpanish
     ? [
-        { label: 'Sobre Mí',  to: 'about' },
+        { label: 'Entrenadores', to: 'about' },
         { label: 'Programas', to: 'programs' },
         { label: 'Precios',   to: 'pricing' },
         { label: 'Reseñas',   to: 'testimonials' },

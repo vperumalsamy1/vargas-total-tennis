@@ -4,7 +4,7 @@ export const content = {
   seo: {
     title: 'Vargas Total Tennis · Clases de Tenis en Tampa Bay, FL',
     description:
-      'Clases de tenis privadas y grupales para niños y adultos en Tampa Bay. Entrenador certificado USPTA y PTR con experiencia profesional. ¡Reserva tu clase gratis hoy!',
+      'Clases de tenis privadas y grupales para niños y adultos en Tampa Bay. Entrenadores certificados USPTA y PTR con experiencia profesional. ¡Reserva hoy!',
     hreflang: {
       en: 'https://vargastotaltennis.com',
       es: 'https://vargastotaltennis.com/es',
@@ -13,27 +13,26 @@ export const content = {
 
   nav: {
     links: [
-      { label: 'Sobre Mí',  to: 'about' },
-      { label: 'Programas', to: 'programs' },
-      { label: 'Precios',   to: 'pricing' },
-      { label: 'Reseñas',   to: 'testimonials' },
-      { label: 'Contacto',  to: 'contact' },
+      { label: 'Entrenadores', to: 'about' },
+      { label: 'Programas',    to: 'programs' },
+      { label: 'Precios',      to: 'pricing' },
+      { label: 'Reseñas',      to: 'testimonials' },
+      { label: 'Contacto',     to: 'contact' },
     ],
     cta: 'Reserva tu clase',
   },
 
   hero: {
     eyebrow: 'Tampa Bay, Florida',
-    // Last item receives the light green accent colour
     headline: ['Entrena mejor.', 'Juega mejor.', 'Ama el deporte.'],
     subtext:
       'Clases privadas y clínicas durante todo el año para todos los niveles — desde principiantes hasta jugadores de torneo. Con base en Tampa Bay, FL.',
-    cta_primary: 'Reserva una clase gratis',
+    cta_primary: 'Reserva una clase con descuento',
     cta_ghost: 'Ver programas',
     stats: [
-      { number: '10+',         label: 'Años de experiencia' },
+      { number: '21+',         label: 'Años de experiencia' },
       { number: 'Todas las',   label: 'edades' },
-      { number: 'Certificado', label: 'SGI' },
+      { number: 'USPTA',       label: '& PTR Certificado' },
       { number: '⭐ 5.0',      label: 'Calificación' },
     ],
     quote: {
@@ -43,9 +42,9 @@ export const content = {
   },
 
   trust: [
-    'Entrenador Certificado USPTA & PTR',
+    'Entrenadores Certificados USPTA & PTR',
     'All-American y Experiencia Profesional',
-    'Tampa Bay · Saddlebrook Resort',
+    'Tampa Bay · Múltiples ubicaciones',
     'Todos los niveles · Todas las edades · Todo el año',
   ],
 
@@ -57,65 +56,90 @@ export const content = {
         title: 'Clases Privadas',
         description:
           'Entrenamiento personalizado adaptado a tu juego. Disponible todo el año para todos los niveles, desde principiantes hasta jugadores de torneo avanzados.',
-        price: '$60 / hr',
-        priceNote: '[UPDATE: confirmar tarifa]',
+        price: 'Consultar precio',
+        priceNote: '',
         cta: 'Reservar clase',
       },
       {
         title: 'Clínicas Grupales',
         description:
-          'Sesiones grupales de alta energía con ejercicios innovadores que mejoran la técnica y el acondicionamiento físico — ¡y son muy divertidas!',
-        price: '$30 / persona',
-        priceNote: '[UPDATE: confirmar tarifa]',
-        cta: 'Unirse al grupo',
+          'Sesiones grupales de alta energía con ejercicios estructurados. Todos los martes (edades 6–10 a las 3:20 pm · 11+ a las 4:05 pm) y jueves (edades 7+ a las 9:15 am). Contribuye lo que puedas.',
+        price: 'Donación voluntaria',
+        priceNote: '',
+        cta: 'Reservar lugar',
       },
       {
-        title: 'Academia Junior',
+        title: 'Campamento de Verano',
         description:
-          'Entrenamiento apropiado para niños de todas las habilidades. Los niños son desafiados con ejercicios creativos que desarrollan técnica, condición física y amor por el deporte.',
-        price: 'Precio personalizado',
-        priceNote: '[UPDATE: consultar para detalles]',
-        cta: 'Más información',
+          'Diez semanas de tenis en Country Place Park — del 1 de junio al 7 de agosto de 2026. Sesiones lunes, miércoles y sábados para edades 6–8 y 9+. Cupos limitados.',
+        price: '1 jun – 7 ago',
+        priceNote: '',
+        cta: 'Registrarse ahora',
       },
       {
         title: 'Preparación para Torneos',
         description:
-          'Entrenamiento avanzado para jugadores competitivos. Nestor ha trabajado con profesionales del top 200 ATP y WTA — sabe lo que se necesita para competir.',
-        price: 'Precio personalizado',
-        priceNote: '[UPDATE: consultar para detalles]',
+          'Entrenamiento avanzado para jugadores competitivos. El Coach Nestor ha trabajado con profesionales del top 200 ATP y WTA — sabe lo que se necesita para competir.',
+        price: 'Consultar precio',
+        priceNote: '',
         cta: 'Comenzar',
       },
     ],
   },
 
   about: {
-    label: 'Sobre el entrenador',
-    heading: 'Un entrenador que vivió el juego — y ama enseñarlo',
-    para1:
-      'El Coach Nestor Vargas combina experiencia de clase mundial con pasión genuina en cada clase. Nacido en Colombia, Nestor jugó tenis universitario de División I y II en los Estados Unidos, ganó el prestigioso premio All-American y luego compitió profesionalmente. Posee certificaciones USPTA y PTR — dos de las credenciales más altas en el deporte.',
-    para2:
-      'Hoy, Nestor canaliza esa experiencia en ejercicios innovadores, imaginativos y divertidos que mejoran tanto la técnica como el acondicionamiento físico. Ha trabajado con miles de jugadores de todos los niveles — incluyendo profesionales del top 200 ATP y WTA — y actualmente asesora en el reconocido Saddlebrook Resort. Ya sea que su hijo tome una raqueta por primera vez o se esté preparando para competir, Nestor lo guía exactamente donde está.',
-    bullets: [
-      'Certificado USPTA & PTR — las credenciales más altas del tenis',
-      'Jugador All-American con experiencia en el tour profesional',
-      'Ejercicios innovadores que combinan técnica y condición física',
-      '¿Sin raqueta? No hay problema — solo trae una toalla y diviértete',
+    label: 'Conoce a los entrenadores',
+    heading: 'Experimentados. Apasionados. Comprometidos con tu crecimiento.',
+    coaches: [
+      {
+        avatar: 'NV',
+        name: 'Nestor Vargas',
+        title: 'Entrenador Principal · Vargas Total Tennis',
+        para1:
+          'El Coach Nestor Vargas combina experiencia de clase mundial con pasión genuina en cada clase. Nacido en Colombia, Nestor comenzó a entrenar a los 14 años y lleva más de 21 años desarrollando jugadores de todos los niveles. Jugó tenis universitario de División I y II en los Estados Unidos, ganó el prestigioso premio All-American y luego compitió profesionalmente.',
+        para2:
+          'Hoy, Nestor canaliza esa experiencia en ejercicios innovadores que mejoran tanto la técnica como el acondicionamiento físico. Posee certificaciones USPTA y PTR — dos de las credenciales más altas del tenis — y ha trabajado con miles de jugadores, incluyendo profesionales del top 200 ATP y WTA. Actualmente entrena en el reconocido Saddlebrook Resort.',
+        bullets: [
+          'Certificado USPTA & PTR — credenciales más altas del tenis',
+          '21+ años de experiencia — comenzó a entrenar a los 14 años',
+          'Jugador All-American con experiencia en el tour profesional',
+          'Ha trabajado con profesionales del top 200 ATP y WTA',
+        ],
+        badges: ['Certificado USPTA', 'Certificado PTR', 'All-American', 'Saddlebrook Resort'],
+      },
+      {
+        avatar: 'LC',
+        name: 'Coach Leo',
+        title: 'Entrenador · Certificado PTR',
+        para1:
+          'El viaje tenístico del Coach Leo comenzó a los siete años en Venezuela, donde superó recursos limitados para convertirse en el #1 juvenil del país — ganando múltiples títulos nacionales y compitiendo internacionalmente. Su éxito le dio la oportunidad de entrenar en programas de alto rendimiento en Alabama y Florida, compitiendo junto a jugadores universitarios y profesionales.',
+        para2:
+          'Hoy, como entrenador certificado PTR con más de 1,000 horas de experiencia, Leo trabaja con jugadores de todas las edades y niveles — desde principiantes hasta atletas competitivos y adultos. Conocido por su enfoque energético y estructurado, se centra en el desarrollo técnico, el rendimiento en partidos y la confianza. Actualmente es estudiante de Ingeniería Mecánica en la Universidad del Sur de Florida.',
+        bullets: [
+          'Certificado PTR con más de 1,000 horas de experiencia',
+          'Ex #1 juvenil de Venezuela — múltiple campeón nacional',
+          'Entrenado en programas de alto rendimiento en Alabama y Florida',
+          'Trabaja con todas las edades, desde principiantes hasta competidores',
+        ],
+        badges: ['Certificado PTR', '#1 Venezuela Juvenil', 'USF Ingeniería', 'Bilingüe EN/ES'],
+      },
     ],
-    badges: [
-      'Certificado USPTA',
-      'Certificado PTR',
-      'All-American',
-      'Tampa FL',
-      'Saddlebrook Resort',
-    ],
-    avatar: 'NV',
-    coach_name: 'Nestor Vargas',
-    coach_title: 'Entrenador Principal · Vargas Total Tennis',
   },
 
   testimonials: {
     label: 'Reseñas',
     title: 'Lo que dicen las familias de Tampa',
+    review_cta: {
+      label: 'Comparte tu experiencia',
+      subtext: '¿Entrenaste con el Coach Nestor o el Coach Leo? Nos encantaría escucharte.',
+      name_label: 'Tu nombre',
+      name_placeholder: 'María García',
+      review_label: 'Tu experiencia',
+      review_placeholder: 'Cuéntanos sobre tus clases — qué te gustó, cómo mejoraste...',
+      submit: 'Enviar reseña',
+      success_heading: '¡Gracias!',
+      success_text: 'Tu reseña significa mucho para nosotros. Gracias por compartir tu experiencia.',
+    },
     items: [
       {
         quote:
@@ -146,71 +170,55 @@ export const content = {
 
   pricing: {
     label: 'Precios',
-    title: 'Tarifas simples y transparentes',
-    tiers: [
+    title: 'Cada jugador es diferente — las tarifas lo reflejan',
+    subtext:
+      'Las tarifas varían según la ubicación, el tipo de sesión y tu situación individual. Contáctanos y encontraremos lo que mejor se adapte a ti.',
+    options: [
       {
-        name: 'Clínica Grupal',
-        price: '$30',
-        period: '/ persona',
-        note: '[UPDATE: confirmar tarifa]',
-        featured: false,
-        badge: null,
-        cta: 'Reservar ahora',
+        name: 'Clases Privadas',
+        icon: 'user',
+        description: 'Sesiones individuales completamente adaptadas a tu juego, disponibles todo el año para todas las edades y niveles.',
         features: [
-          'Grupos pequeños (máx. 6)',
-          'Sesiones de 60 minutos',
-          'Ejercicios innovadores + partidos',
+          'Entrenamiento completamente personalizado',
+          'Niños y adultos bienvenidos',
+          'Horario flexible',
           'Todos los niveles',
+          'Disponible todo el año',
+          'Sesiones enfocadas en el progreso',
+        ],
+        cta: 'Consultar precio',
+        featured: false,
+      },
+      {
+        name: 'Clínicas Grupales',
+        icon: 'users',
+        description: 'Sesiones grupales estructuradas en múltiples ubicaciones en Tampa, todos los martes y jueves.',
+        features: [
+          'Sesiones los martes y jueves',
+          'Múltiples ubicaciones en Tampa',
+          'Edades a partir de 6 años',
+          'Ejercicios innovadores + partidos',
+          'Contribuye lo que puedas',
           'Ambiente divertido y dinámico',
         ],
-      },
-      {
-        name: 'Clase Privada',
-        price: '$60',
-        period: '/ hr',
-        note: '[UPDATE: confirmar tarifa]',
+        cta: 'Consultar detalles',
         featured: true,
-        badge: 'Más popular',
-        cta: 'Reservar clase privada',
-        features: [
-          'Completamente personalizado',
-          'Horario flexible',
-          'Niños y adultos',
-          'Seguimiento de progreso',
-          'Disponible todo el año',
-          'Primera clase de prueba gratis', // [UPDATE: confirmar si se ofrece]
-        ],
-      },
-      {
-        name: 'Academia Junior',
-        price: 'Personalizado',
-        period: '',
-        note: '[UPDATE: consultar para detalles]',
-        featured: false,
-        badge: null,
-        cta: 'Contáctanos',
-        features: [
-          'Edades 5–18, por nivel',
-          'Sesiones semanales',
-          'Preparación para torneos',
-          'Actualizaciones a padres',
-          'Afiliado a Saddlebrook',
-        ],
       },
     ],
+    note: 'Los estudiantes de larga data y las familias que regresan reciben tarifas preferenciales — solo pregunta.',
   },
 
   contact: {
     label: 'Hablemos',
     heading: '¿Listo para pisar la cancha?',
     subtext:
-      'Envíale un mensaje al Coach Nestor y te responderá en menos de 24 horas. Clase de prueba gratuita disponible para nuevos estudiantes.',
+      'Envíanos un mensaje y el Coach Nestor te responderá en menos de 24 horas. Clase de prueba con descuento disponible para nuevos estudiantes.',
     details: [
-      'Tampa Bay, FL · Saddlebrook Resort',
-      '[UPDATE: teléfono]',
-      '[UPDATE: correo electrónico]',
-      'Lun–Sáb · 7am a 7pm  [UPDATE]',
-      '@vargastotaltennis  [UPDATE]',
+      'Tampa Bay, FL · Múltiples ubicaciones',
+      '(864) 431-2442',
+      'tennisvargas17@hotmail.com',
+      'Lun–Sáb · 7am a 7pm',
+      '@vargastotaltennis',
     ],
     form: {
       first_name: 'Nombre',
@@ -222,13 +230,13 @@ export const content = {
         { value: '',           label: 'Selecciona un programa...' },
         { value: 'private',    label: 'Clases Privadas' },
         { value: 'group',      label: 'Clínicas Grupales' },
-        { value: 'junior',     label: 'Academia Junior' },
+        { value: 'summer',     label: 'Campamento de Verano' },
         { value: 'tournament', label: 'Preparación para Torneos' },
         { value: 'unsure',     label: 'No estoy seguro/a aún' },
       ],
-      message_label: 'Cuéntale al Coach Nestor sobre ti',
+      message_label: 'Cuéntanos sobre ti',
       message_placeholder:
-        'Cuéntale al Coach Nestor sobre ti o tu hijo — edad, experiencia, metas...',
+        'Cuéntanos sobre ti o tu hijo — edad, experiencia, metas...',
       submit: 'Enviar mensaje — es gratis consultar',
       success_heading: '¡Mensaje enviado!',
       success_text:
@@ -239,7 +247,7 @@ export const content = {
         last_name: 'El apellido es requerido',
         email_required: 'El correo electrónico es requerido',
         email_invalid: 'Por favor ingresa un correo válido',
-        message: 'Por favor cuéntale algo a Nestor sobre ti',
+        message: 'Por favor cuéntanos algo sobre ti',
       },
     },
   },
@@ -247,7 +255,7 @@ export const content = {
   footer: {
     tagline: 'Entrenamiento experto para todas las edades · Tampa Bay, FL',
     copyright: '© 2026 Vargas Total Tennis · Tampa, FL',
-    domain: 'CoachNestor.com',
-    domain_note: '[UPDATE: dominio real]',
+    domain: 'vargastotaltennis.com',
+    domain_note: '',
   },
 }

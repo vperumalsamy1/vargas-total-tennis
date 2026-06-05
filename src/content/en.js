@@ -4,7 +4,7 @@ export const content = {
   seo: {
     title: 'Vargas Total Tennis · Tampa Bay, FL',
     description:
-      'Expert tennis coaching for all ages in Tampa Bay, FL. Private lessons, group clinics, junior academy, and tournament prep with Coach Nestor Vargas.',
+      'Expert tennis coaching for all ages in Tampa Bay, FL. Private lessons, group clinics, and tournament prep with Coach Nestor Vargas and Coach Leo.',
     hreflang: {
       en: 'https://vargastotaltennis.com',
       es: 'https://vargastotaltennis.com/es',
@@ -24,16 +24,15 @@ export const content = {
 
   hero: {
     eyebrow: 'Tampa Bay, Florida',
-    // Last item in the array receives the light green accent colour
     headline: ['Train smarter.', 'Play better.', 'Love the game.'],
     subtext:
       'Year-round private lessons and clinics for all ages — from first-time beginners to advanced tournament players. Based in Tampa Bay, FL.',
-    cta_primary: 'Book a free trial',
+    cta_primary: 'Book discounted trial',
     cta_ghost: 'View programs',
     stats: [
-      { number: '10+',      label: 'Years Coaching' },
+      { number: '21+',      label: 'Years Coaching' },
       { number: 'All Ages', label: 'Welcome' },
-      { number: 'SGI',      label: 'Certified' },
+      { number: 'USPTA',    label: '& PTR Certified' },
       { number: '⭐ 5.0',   label: 'Rating' },
     ],
     quote: {
@@ -43,9 +42,9 @@ export const content = {
   },
 
   trust: [
-    'USPTA & PTR Certified Coach',
+    'USPTA & PTR Certified Coaches',
     'All-American & Professional Tour Experience',
-    'Tampa Bay · Saddlebrook Resort',
+    'Tampa Bay · Multiple Locations',
     'All levels · All ages · Year round',
   ],
 
@@ -56,60 +55,91 @@ export const content = {
       {
         title: 'Private Lessons',
         description:
-          'One-on-one coaching tailored to your game. Offered year-round for all levels from complete beginners to advanced tournament players.',
-        price: '$60 / hr',
-        priceNote: '[UPDATE: confirm rate]',
+          'One-on-one coaching tailored to your game. Offered year-round for all levels — from complete beginners to advanced tournament players.',
+        price: 'Contact for rates',
+        priceNote: '',
         cta: 'Book a session',
       },
       {
         title: 'Group Clinics',
         description:
-          'High-energy group sessions with innovative drills that improve skill and physical conditioning — and are genuinely fun.',
-        price: '$30 / person',
-        priceNote: '[UPDATE: confirm rate]',
-        cta: 'Join a group',
+          'High-energy group sessions with structured drills. Every Tuesday (ages 6–10 at 3:20 pm · 11+ at 4:05 pm) and Thursday (ages 7+ at 9:15 am) at Tampa locations. Contribute what you can.',
+        price: 'Donation-based',
+        priceNote: '',
+        cta: 'Reserve your spot',
       },
       {
-        title: 'Junior Academy',
+        title: 'Summer Camps',
         description:
-          'Age-appropriate training for kids of all abilities. Creative drills build technique, fitness, and a lifelong love for the sport.',
-        price: 'Custom pricing',
-        priceNote: '[UPDATE: contact for details]',
-        cta: 'Learn more',
+          'Ten weeks of tennis fun at Country Place Park — June 1 through August 7, 2026. Monday, Wednesday, and Saturday sessions for ages 6–8 and 9+. Limited spots available.',
+        price: 'June 1 – Aug 7',
+        priceNote: '',
+        cta: 'Register now',
       },
       {
         title: 'Tournament Prep',
         description:
-          "Advanced coaching for competitive players. Nestor has worked with top 200 ATP and WTA professionals — he knows what it takes.",
-        price: 'Custom pricing',
-        priceNote: '[UPDATE: contact for details]',
+          "Advanced coaching for competitive players. Coach Nestor has worked with top 200 ATP and WTA professionals — he knows what it takes to compete at the highest level.",
+        price: 'Contact for rates',
+        priceNote: '',
         cta: 'Get started',
       },
     ],
   },
 
   about: {
-    label: 'About Coach Nestor',
-    heading: "A coach who's been there — and loves bringing others along",
-    para1:
-      'Coach Nestor Vargas brings a rare combination of world-class experience and genuine passion to every lesson. A Colombian-born tennis professional, Nestor played Division I and II college tennis in the US, earned the prestigious All-American tennis award, and went on to compete professionally. He holds both USPTA and PTR certifications — two of the highest coaching credentials in the sport.',
-    para2:
-      "Today Nestor channels that experience into innovative, imaginative and fun drills that improve both skill and physical conditioning. He's worked with thousands of players across all levels — including top 200 ATP and WTA professionals — and currently consults at the renowned Saddlebrook Resort. Whether your child is picking up a racket for the first time or you're preparing for tournament play, Nestor meets you exactly where you are.",
-    bullets: [
-      "USPTA & PTR certified — two of tennis's highest coaching credentials",
-      'All-American college player with professional tour experience',
-      'Innovative drills combining skill development and physical fitness',
-      'No racket? No problem — just bring a towel and have fun',
+    label: 'Meet the Coaches',
+    heading: 'Experienced. Passionate. Committed to your growth.',
+    coaches: [
+      {
+        avatar: 'NV',
+        name: 'Nestor Vargas',
+        title: 'Head Coach · Vargas Total Tennis',
+        para1:
+          'Coach Nestor Vargas brings a rare combination of world-class experience and genuine passion to every lesson. A Colombian-born tennis professional, Nestor began coaching at age 14 and has spent 21+ years developing players at every level. He played Division I and II college tennis in the US, earned the prestigious All-American tennis award, and went on to compete professionally.',
+        para2:
+          "Today Nestor channels that experience into innovative, imaginative drills that improve both skill and physical conditioning. He holds USPTA and PTR certifications — two of tennis's highest coaching credentials — and has worked with thousands of players including top 200 ATP and WTA professionals. He currently coaches at the renowned Saddlebrook Resort.",
+        bullets: [
+          'USPTA & PTR certified — two of tennis\'s highest coaching credentials',
+          '21+ years coaching experience — started coaching at age 14',
+          'All-American college player with professional tour experience',
+          'Worked with top 200 ATP and WTA professionals',
+        ],
+        badges: ['USPTA Certified', 'PTR Certified', 'All-American', 'Saddlebrook Resort'],
+      },
+      {
+        avatar: 'LC',
+        name: 'Coach Leo',
+        title: 'Staff Coach · PTR Certified',
+        para1:
+          "Coach Leo's tennis journey began at age seven in Venezuela, where he overcame limited resources to become the country's #1 ranked junior — winning multiple national titles and competing internationally. His success earned him opportunities to train in elite high-performance programs across Alabama and Florida, competing alongside collegiate and professional players.",
+        para2:
+          'Now a PTR-certified coach with over 1,000 hours of coaching experience, Leo works with players of all ages and levels — from beginner juniors to competitive athletes and adults. Known for his energetic and structured approach, he focuses on technical development, match performance, and building confidence, always adapting to each player\'s needs. He is currently a Senior Mechanical Engineering student at USF.',
+        bullets: [
+          'PTR Certified with 1,000+ hours of coaching experience',
+          'Former #1 ranked junior in Venezuela — multiple national champion',
+          'Trained in elite high-performance programs across Alabama and Florida',
+          'Works with all ages from beginner juniors to competitive adults',
+        ],
+        badges: ['PTR Certified', '#1 Venezuela Junior', 'USF Engineering', 'Bilingual EN/ES'],
+      },
     ],
-    badges: ['USPTA Certified', 'PTR Certified', 'All-American', 'Tampa FL', 'Saddlebrook Resort'],
-    avatar: 'NV',
-    coach_name: 'Nestor Vargas',
-    coach_title: 'Head Coach · Vargas Total Tennis',
   },
 
   testimonials: {
     label: 'Reviews',
     title: 'What Tampa families say',
+    review_cta: {
+      label: 'Share your experience',
+      subtext: "Trained with Coach Nestor or Coach Leo? We'd love to hear from you.",
+      name_label: 'Your name',
+      name_placeholder: 'Jane Smith',
+      review_label: 'Your experience',
+      review_placeholder: 'Tell others about your lessons — what you loved, how you improved...',
+      submit: 'Submit review',
+      success_heading: 'Thank you!',
+      success_text: 'Your review means the world to us. We appreciate you sharing your experience.',
+    },
     items: [
       {
         quote:
@@ -140,71 +170,55 @@ export const content = {
 
   pricing: {
     label: 'Pricing',
-    title: 'Simple, transparent rates',
-    tiers: [
+    title: 'Every player is different — rates reflect that',
+    subtext:
+      'Rates vary based on location, session type, and your individual situation. Contact us and we\'ll find the right fit for you.',
+    options: [
       {
-        name: 'Group Clinics',
-        price: '$30',
-        period: '/ person',
-        note: '[UPDATE: confirm rate]',
-        featured: false,
-        badge: null,
-        cta: 'Join a group',
-        features: [
-          'Small group sessions (max 6)',
-          '60-minute structured lesson',
-          'Innovative drills + match play',
-          'All skill levels welcome',
-          'Fun, high-energy environment',
-        ],
-      },
-      {
-        name: 'Private Lesson',
-        price: '$60',
-        period: '/ hr',
-        note: '[UPDATE: confirm rate]',
-        featured: true,
-        badge: 'Most popular',
-        cta: 'Book a private lesson',
+        name: 'Private Lessons',
+        icon: 'user',
+        description: 'One-on-one sessions fully tailored to your game, available year-round for all ages and levels.',
         features: [
           'Fully personalized coaching',
-          'Flexible scheduling',
           'Kids & adults welcome',
-          'Progress tracking',
+          'Flexible scheduling',
+          'All skill levels',
           'Year-round availability',
-          'Free first trial lesson', // [UPDATE: confirm if offered]
+          'Progress-focused sessions',
         ],
+        cta: 'Contact for rates',
+        featured: false,
       },
       {
-        name: 'Junior Academy',
-        price: 'Custom',
-        period: 'pricing',
-        note: '[UPDATE: contact for details]',
-        featured: false,
-        badge: null,
-        cta: 'Enquire now',
+        name: 'Group Clinics',
+        icon: 'users',
+        description: 'Structured group sessions at multiple Tampa locations every Tuesday and Thursday.',
         features: [
-          'Ages 5–18, grouped by level',
-          'Weekly sessions',
-          'Tournament preparation',
-          'Parent progress updates',
-          'Saddlebrook Resort affiliated',
+          'Tuesday & Thursday sessions',
+          'Multiple Tampa locations',
+          'Ages 6 and up',
+          'Innovative drills + match play',
+          'Contribute what you can',
+          'Fun, high-energy environment',
         ],
+        cta: 'Contact for details',
+        featured: true,
       },
     ],
+    note: 'Long-time students and returning families receive preferential rates — just ask.',
   },
 
   contact: {
     label: "Let's connect",
     heading: 'Ready to step on the court?',
     subtext:
-      "Send Coach Nestor a message and he'll get back to you within 24 hours. Free trial lesson available for new students.",
+      "Send us a message and Coach Nestor will get back to you within 24 hours. Discounted trial available for new students.",
     details: [
-      'Tampa Bay, FL · Saddlebrook Resort',
-      '[UPDATE: real phone number]',
-      '[UPDATE: real email address]',
-      'Mon–Sat · 7 am to 7 pm  [UPDATE]',
-      '@vargastotaltennis  [UPDATE]',
+      'Tampa Bay, FL · Multiple locations',
+      '(864) 431-2442',
+      'tennisvargas17@hotmail.com',
+      'Mon–Sat · 7 am to 7 pm',
+      '@vargastotaltennis',
     ],
     form: {
       first_name: 'First name',
@@ -216,14 +230,14 @@ export const content = {
         { value: '',           label: 'Select a program...' },
         { value: 'private',    label: 'Private Lessons' },
         { value: 'group',      label: 'Group Clinics' },
-        { value: 'junior',     label: 'Junior Academy' },
+        { value: 'summer',     label: 'Summer Camps' },
         { value: 'tournament', label: 'Tournament Prep' },
         { value: 'unsure',     label: "I'm not sure yet" },
       ],
       message_label: 'Tell Coach Nestor about yourself',
       message_placeholder:
-        'Tell Coach Nestor about yourself or your child — age, experience, goals...',
-      submit: "Send message — it's free to enquire",
+        'Tell us about yourself or your child — age, experience, goals...',
+      submit: 'Send message — it\'s free to enquire',
       success_heading: 'Message sent!',
       success_text:
         'Coach Nestor will be in touch within 24 hours. Looking forward to seeing you on the court.',
@@ -233,7 +247,7 @@ export const content = {
         last_name: 'Last name is required',
         email_required: 'Email is required',
         email_invalid: 'Please enter a valid email',
-        message: 'Please tell Nestor a bit about yourself',
+        message: 'Please tell us a bit about yourself',
       },
     },
   },
@@ -241,7 +255,7 @@ export const content = {
   footer: {
     tagline: 'Expert tennis coaching for all ages · Tampa Bay, FL',
     copyright: '© 2026 Vargas Total Tennis · Tampa, FL',
-    domain: 'CoachNestor.com',
-    domain_note: '[UPDATE: real domain]',
+    domain: 'vargastotaltennis.com',
+    domain_note: '',
   },
 }
