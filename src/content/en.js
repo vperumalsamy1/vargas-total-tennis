@@ -4,7 +4,7 @@ export const content = {
   seo: {
     title: 'Vargas Total Tennis · Tampa Bay, FL',
     description:
-      'Expert tennis coaching for all ages in Tampa Bay, FL. Private lessons, group clinics, and tournament prep with Coach Nestor Vargas and Coach Leo.',
+      'Expert tennis coaching for all ages in Tampa, Carrollwood, Lutz & Wesley Chapel. Private lessons, group clinics, and tournament prep with Coach Nestor Vargas and Coach Leo.',
     hreflang: {
       en: 'https://vargastotaltennis.com',
       es: 'https://vargastotaltennis.com/es',
@@ -26,8 +26,9 @@ export const content = {
     eyebrow: 'Tampa Bay, Florida',
     headline: ['Train smarter.', 'Play better.', 'Love the game.'],
     subtext:
-      'Year-round private lessons and clinics for all ages — from first-time beginners to advanced tournament players. Based in Tampa Bay, FL.',
+      'Year-round private lessons and clinics for all ages — from first-time beginners to advanced tournament players. Serving Tampa, Carrollwood, Lutz & Wesley Chapel.',
     cta_primary: 'Book discounted trial',
+    cta_call: 'Text Coach',
     cta_ghost: 'View programs',
     stats: [
       { number: '21+',      label: 'Years Coaching' },

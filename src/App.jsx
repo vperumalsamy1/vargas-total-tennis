@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import FloatingCTA from './components/FloatingCTA'
 
 // Renders the full page with the given content object.
 // Shared by both / (English) and /es (Spanish) routes.
@@ -27,6 +28,7 @@ function Site({ content }) {
       <Pricing content={content.pricing} />
       <Contact content={content.contact} />
       <Footer content={content.footer} />
+      <FloatingCTA label={content.hero.cta_call} />
     </div>
   )
 }

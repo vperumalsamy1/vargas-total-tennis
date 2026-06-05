@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown, Phone } from 'lucide-react'
 
 const leftVariants = {
   hidden: {},
@@ -12,7 +12,7 @@ const itemVariant = {
 }
 
 export default function Hero({ content }) {
-  const { eyebrow, headline, subtext, cta_primary, cta_ghost, stats, quote } = content
+  const { eyebrow, headline, subtext, cta_primary, cta_ghost, cta_call, stats, quote } = content
 
   return (
     <section
@@ -72,18 +72,16 @@ export default function Hero({ content }) {
                 {cta_primary}
                 <ArrowRight size={15} />
               </Link>
-              <Link
-                to="programs"
-                smooth
-                duration={500}
-                offset={-64}
-                className="inline-flex items-center gap-2 font-medium px-6 py-3.5 rounded-lg cursor-pointer transition-colors duration-200"
+              <a
+                href="sms:8644312442"
+                className="inline-flex items-center gap-2 font-medium px-6 py-3.5 rounded-lg transition-colors duration-200"
                 style={{ border: '1.5px solid rgba(255,255,255,0.3)', color: '#fff' }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.65)')}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)')}
               >
-                {cta_ghost}
-              </Link>
+                <Phone size={14} />
+                {cta_call}
+              </a>
             </motion.div>
           </motion.div>
 
