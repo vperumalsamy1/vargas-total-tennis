@@ -26,7 +26,7 @@ export const content = {
     eyebrow: 'Tampa Bay, Florida',
     headline: ['Entrena mejor.', 'Juega mejor.', 'Ama el deporte.'],
     subtext:
-      'Clases privadas y clínicas durante todo el año para todos los niveles — desde principiantes hasta jugadores de torneo. Servicio en Tampa, Carrollwood, Lutz y Wesley Chapel.',
+      'Clases privadas y clínicas durante todo el año para todos los niveles — desde principiantes hasta jugadores de torneo. Servicio en Tampa, Carrollwood, Lutz, Wesley Chapel, Land O\' Lakes y New Tampa.',
     cta_primary: 'Reserva una clase con descuento',
     cta_call: 'Escríbenos',
     cta_ghost: 'Ver programas',
