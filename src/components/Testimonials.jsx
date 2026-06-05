@@ -56,11 +56,15 @@ function ReviewForm({ rc }) {
   const nameFocus   = useFocus()
   const reviewFocus = useFocus()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!name.trim() || !review.trim() || rating === 0) return
+    await fetch('https://formspree.io/f/xjgdkaej', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ name, rating: `${rating} / 5 stars`, review }),
+    })
     setSubmitted(true)
-    // [UPDATE: connect to Formspree, Netlify Forms, or EmailJS]
   }
 
   if (submitted) {
