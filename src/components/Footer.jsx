@@ -41,7 +41,7 @@ export default function Footer({ content }) {
         >
           {/* Logo + tagline */}
           <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-            <img src={logoWhite} alt="Vargas Total Tennis" className="h-8 w-auto" />
+            <img src={logoWhite} alt="Vargas Total Tennis" className="h-10 w-auto" />
             <p className="text-sm max-w-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {tagline}
             </p>
