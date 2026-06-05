@@ -4,7 +4,6 @@ import { content as es } from './content/es'
 import PageHead from './components/PageHead'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import TrustBar from './components/TrustBar'
 import Programs from './components/Programs'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
@@ -20,8 +19,7 @@ function Site({ content }) {
     <div className="min-h-screen font-sans">
       <PageHead seo={{ ...content.seo, lang: content.lang }} />
       <Navbar content={content.nav} />
-      <Hero content={content.hero} />
-      <TrustBar content={content.trust} />
+      <Hero content={content.hero} trust={content.trust} />
       <Programs content={content.programs} />
       <About content={content.about} />
       <Testimonials content={content.testimonials} />
