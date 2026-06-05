@@ -129,7 +129,7 @@ export const content = {
 
   testimonials: {
     label: 'Reviews',
-    title: 'What Tampa families say',
+    title: 'What students say — verified reviews',
     review_cta: {
       label: 'Share your experience',
       subtext: "Trained with Coach Nestor or Coach Leo? We'd love to hear from you.",
@@ -144,26 +144,50 @@ export const content = {
     items: [
       {
         quote:
-          "Coach Nestor's drills are unlike anything my son has experienced. Challenging, fun, and incredibly effective.",
-        name: 'Parent of junior student',
-        subtitle: 'Junior program · Tampa, FL',
-        initials: 'JF',
+          "I've had a few tennis coaches and by far he is the best. He has shown me so many new things I never knew. He is patient, kind, attentive and professional. Highly recommend Nestor!!",
+        name: 'Julie H.',
+        subtitle: 'Lessons.com · Verified review',
+        initials: 'JH',
         color: '#1D9E75',
       },
       {
         quote:
-          "I came with zero experience and no racket — Nestor had me covered on both. Best decision I made.",
-        name: 'Adult beginner',
-        subtitle: 'Private lessons · Tampa, FL',
-        initials: 'MR',
+          "Nestor will stay on you with prompt correction to make sure you are swinging correctly. He helps you break bad habits with positive encouragement and step by step instructions. He simply makes your tennis game more enjoyable. Highly motivational. He is our new instructor now.",
+        name: 'Nicholas',
+        subtitle: 'Groupon · Verified review',
+        initials: 'N',
         color: '#EF9F27',
       },
       {
         quote:
-          'You can feel the professional experience behind every lesson. My daughter went from casual player to competing in tournaments.',
-        name: 'Tampa parent, 2 years',
-        subtitle: 'Junior & Tournament prep',
-        initials: 'SL',
+          "Nestor was incredibly friendly while also being an effective mentor. He teaches in a way that makes tennis fun and was very encouraging to me and my beginner brother. I couldn't recommend him enough!",
+        name: 'Maryam L.',
+        subtitle: 'Lessons.com · Verified review',
+        initials: 'ML',
+        color: '#378ADD',
+      },
+      {
+        quote:
+          "He helped me a lot with technical things of the tennis sport. I have improved so much from where I started. His detail to what I'm doing helps me a lot. 10/10 would recommend to anyone who wants to get their game to the next level.",
+        name: 'Carlos Y F.',
+        subtitle: 'Lessons.com · Verified review',
+        initials: 'CY',
+        color: '#1D9E75',
+      },
+      {
+        quote:
+          "Love the lessons! Nestor is super dedicated and detail oriented — so important to get technique right from the beginning. Thank you!",
+        name: 'Jen',
+        subtitle: 'Groupon · Verified review',
+        initials: 'J',
+        color: '#EF9F27',
+      },
+      {
+        quote:
+          "Nestor will teach you the fundamentals. He's not just a hitting partner. He's the best coach I've had. I highly recommend him.",
+        name: 'Edda R.',
+        subtitle: 'Lessons.com · Verified review',
+        initials: 'ER',
         color: '#378ADD',
       },
     ],
