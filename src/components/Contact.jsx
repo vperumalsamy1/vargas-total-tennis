@@ -50,13 +50,23 @@ export default function Contact({ content }) {
     return e
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
+    await fetch('https://formspree.io/f/xwvjprrq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        phone: data.phone,
+        interest: data.interest,
+        message: data.message,
+      }),
+    })
     setSubmitted(true)
-    // [UPDATE: connect to Formspree, Netlify Forms, or EmailJS]
   }
 
   // Individual focus states for each field
