@@ -10,7 +10,7 @@ export default function FloatingCTA({ label }) {
       transition={{ delay: 1.5, duration: 0.4, ease: 'easeOut' }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 text-white text-sm font-medium px-5 py-3.5 rounded-full shadow-lg"
+      className="fixed bottom-6 right-6 z-50 flex md:hidden items-center gap-2.5 text-white text-sm font-medium px-5 py-3.5 rounded-full shadow-lg"
       style={{ backgroundColor: '#1D9E75' }}
       aria-label="Text Coach Nestor"
     >
