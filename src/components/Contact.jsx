@@ -103,8 +103,18 @@ export default function Contact({ content }) {
             <ul className="flex flex-col gap-5">
               {details.map((text, i) => {
                 const Icon = DETAIL_ICONS[i]
-                return (
-                  <li key={i} className="flex items-start gap-3">
+                const isPhone = i === 1
+                const isEmail = i === 2
+                const isInstagram = i === 4
+                const href = isPhone
+                  ? `tel:${text.replace(/\D/g, '')}`
+                  : isEmail
+                  ? `mailto:${text}`
+                  : isInstagram
+                  ? `https://instagram.com/${text.replace('@', '')}`
+                  : null
+                const inner = (
+                  <>
                     <span
                       className="mt-0.5 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
@@ -114,6 +124,15 @@ export default function Contact({ content }) {
                     <span className="text-sm leading-snug pt-1.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
                       {text}
                     </span>
+                  </>
+                )
+                return (
+                  <li key={i} className="flex items-start gap-3">
+                    {href ? (
+                      <a href={href} target={isInstagram ? '_blank' : undefined} rel="noopener noreferrer" className="flex items-start gap-3 hover:opacity-80 transition-opacity duration-200">
+                        {inner}
+                      </a>
+                    ) : inner}
                   </li>
                 )
               })}
