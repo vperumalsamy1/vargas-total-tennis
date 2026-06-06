@@ -1,6 +1,6 @@
 ﻿import { Link } from 'react-scroll'
 import { NavLink, useLocation } from 'react-router-dom'
-import logoColor from '../assets/logo-color.png'
+import logoFooter from '../assets/logo-footer.png'
 
 // Nav links come from content so they're translated in /es
 export default function Footer({ content }) {
@@ -41,7 +41,7 @@ export default function Footer({ content }) {
         >
           {/* Logo + tagline */}
           <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-            <img src={logoColor} alt="Vargas Total Tennis" className="h-14 w-auto" />
+            <img src={logoFooter} alt="Vargas Total Tennis" className="h-16 w-auto" />
             <p className="text-sm max-w-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {tagline}
             </p>
