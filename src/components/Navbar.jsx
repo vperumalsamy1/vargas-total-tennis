@@ -65,14 +65,14 @@ export default function Navbar({ content }) {
         scrolled ? 'bg-white border-b border-black/[0.08]' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
         {/* Logo */}
         <ScrollLink to="hero" smooth duration={500} className="cursor-pointer flex-shrink-0">
           <img
             src={logoColor}
             alt="Vargas Total Tennis"
-            className="h-11 w-auto"
+            className="h-14 w-auto"
           />
         </ScrollLink>
 
