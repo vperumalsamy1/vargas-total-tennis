@@ -67,8 +67,8 @@ export default function Footer({ content }) {
           className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
           style={{ color: 'rgba(255,255,255,0.35)' }}
         >
-          <div className="flex items-center gap-3">
-            <img src={logoFooter} alt="Vargas Total Tennis" className="h-8 w-auto rounded-md" />
+          <div className="flex items-center gap-2">
+            <img src={logoFooter} alt="Vargas Total Tennis" className="h-10 w-auto" />
             <p>{copyright}</p>
           </div>
           <div className="flex items-center gap-4">
