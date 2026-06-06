@@ -39,7 +39,7 @@ export default function Footer({ content }) {
           className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 pb-10 border-b"
           style={{ borderColor: 'rgba(255,255,255,0.1)' }}
         >
-          <p className="text-sm max-w-xs text-center md:text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-sm whitespace-nowrap text-center md:text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>
             {tagline}
           </p>
 
