@@ -67,15 +67,13 @@ export default function Navbar({ content }) {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
-        {/* Logo — white pill on dark hero, bare on white scrolled nav */}
+        {/* Logo */}
         <ScrollLink to="hero" smooth duration={500} className="cursor-pointer flex-shrink-0">
-          {scrolled ? (
-            <img src={logoColor} alt="Vargas Total Tennis" className="h-14 w-auto" />
-          ) : (
-            <div className="bg-white rounded-xl px-4 py-2">
-              <img src={logoColor} alt="Vargas Total Tennis" className="h-12 w-auto" />
-            </div>
-          )}
+          <img
+            src={logoColor}
+            alt="Vargas Total Tennis"
+            className={`h-14 w-auto transition-all duration-300 ${scrolled ? '' : 'rounded-xl'}`}
+          />
         </ScrollLink>
 
         {/* Desktop nav links */}
