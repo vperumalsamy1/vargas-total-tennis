@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { NavLink, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../assets/logo.svg'
-import logoWhite from '../assets/logo-white.svg'
+import logoColor from '../assets/logo-color.png'
 
 // Small EN | ES pill toggle — reads current route to highlight active lang
 function LangToggle({ scrolled, inDrawer = false }) {
   const { pathname } = useLocation()
   const isSpanish = pathname === '/es'
 
-  const activeStyle   = { color: '#1D9E75', fontWeight: 500 }
+  const activeStyle   = { color: '#8DC63F', fontWeight: 500 }
   const inactiveStyle = inDrawer
     ? { color: '#9ca3af' }
     : scrolled
@@ -70,11 +69,13 @@ export default function Navbar({ content }) {
 
         {/* Logo */}
         <ScrollLink to="hero" smooth duration={500} className="cursor-pointer flex-shrink-0">
-          <img
-            src={scrolled ? logo : logoWhite}
-            alt="Vargas Total Tennis"
-            className="h-10 w-auto"
-          />
+          <div className={scrolled ? '' : 'bg-white rounded-lg px-2 py-1'}>
+            <img
+              src={logoColor}
+              alt="Vargas Total Tennis"
+              className="h-8 w-auto"
+            />
+          </div>
         </ScrollLink>
 
         {/* Desktop nav links */}

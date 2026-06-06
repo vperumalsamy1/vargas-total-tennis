@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 
 // Imperatively updates <html lang>, <title>, <meta description>,
 // and <link rel="alternate" hreflang> for each route.

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Clock, Instagram, Send } from 'lucide-react'
 
@@ -7,7 +7,7 @@ const DETAIL_ICONS = [MapPin, Phone, Mail, Clock, Instagram]
 
 // Shared styled input/select/textarea — keeps focus ring consistent
 const baseStyle  = { border: '0.5px solid rgba(0,0,0,0.15)', backgroundColor: '#fff' }
-const focusStyle = { border: '1.5px solid #1D9E75', boxShadow: '0 0 0 3px rgba(29,158,117,0.1)' }
+const focusStyle = { border: '1.5px solid #8DC63F', boxShadow: '0 0 0 3px rgba(141,198,63,0.1)' }
 const baseCls    = 'w-full rounded-lg text-sm text-gray-800 placeholder-gray-400 px-4 py-3 outline-none transition-all duration-200'
 
 function useFocus() {
@@ -78,7 +78,7 @@ export default function Contact({ content }) {
   const msg   = useFocus()
 
   return (
-    <section id="contact" className="py-24" style={{ backgroundColor: '#0F6E56' }}>
+    <section id="contact" className="py-24" style={{ backgroundColor: '#1B3461' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
 
@@ -89,7 +89,7 @@ export default function Contact({ content }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <p className="section-label mb-4" style={{ color: '#5DCAA5' }}>{label}</p>
+            <p className="section-label mb-4" style={{ color: '#8DC63F' }}>{label}</p>
             <h2
               className="text-3xl md:text-4xl font-medium text-white mb-5"
               style={{ letterSpacing: '-0.02em', lineHeight: 1.2 }}
@@ -152,9 +152,9 @@ export default function Contact({ content }) {
               <div className="text-center py-10">
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5"
-                  style={{ backgroundColor: '#E1F5EE' }}
+                  style={{ backgroundColor: '#EEF7D6' }}
                 >
-                  <Send size={22} color="#1D9E75" />
+                  <Send size={22} color="#8DC63F" />
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-2" style={{ letterSpacing: '-0.02em' }}>
                   {form.success_heading}
@@ -214,9 +214,9 @@ export default function Contact({ content }) {
                 <button
                   type="submit"
                   className="w-full text-sm font-medium text-white py-3.5 rounded-lg transition-colors duration-200"
-                  style={{ backgroundColor: '#1D9E75' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0F6E56')}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#1D9E75')}
+                  style={{ backgroundColor: '#8DC63F' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1B3461')}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#8DC63F')}
                 >
                   {form.submit}
                 </button>

@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         vtt: {
-          primary: '#1D9E75',
-          dark:    '#0F6E56',
-          darker:  '#085041',
-          light:   '#5DCAA5',
-          lightest:'#E1F5EE',
+          primary: '#8DC63F',
+          dark:    '#6B9A30',
+          darker:  '#1B3461',
+          light:   '#B5DC6B',
+          lightest:'#EEF7D6',
           amber:   '#EF9F27',
           blue:    '#378ADD',
         },

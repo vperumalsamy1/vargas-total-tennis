@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { Check, User, Users } from 'lucide-react'
 import { Link } from 'react-scroll'
 
@@ -55,13 +55,13 @@ export default function Pricing({ content }) {
                 className="relative rounded-xl p-8"
                 style={{
                   backgroundColor: '#fff',
-                  border: featured ? '2px solid #1D9E75' : '0.5px solid rgba(0,0,0,0.08)',
+                  border: featured ? '2px solid #8DC63F' : '0.5px solid rgba(0,0,0,0.08)',
                 }}
               >
                 {featured && (
                   <div
                     className="absolute -top-3.5 left-1/2 -translate-x-1/2 text-[11px] font-medium uppercase px-4 py-1 rounded-full whitespace-nowrap"
-                    style={{ backgroundColor: '#E1F5EE', color: '#085041', letterSpacing: '0.06em' }}
+                    style={{ backgroundColor: '#EEF7D6', color: '#132744', letterSpacing: '0.06em' }}
                   >
                     Most popular
                   </div>
@@ -69,14 +69,14 @@ export default function Pricing({ content }) {
 
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center mb-5"
-                  style={{ backgroundColor: '#E1F5EE' }}
+                  style={{ backgroundColor: '#EEF7D6' }}
                 >
-                  <Icon size={18} color="#1D9E75" />
+                  <Icon size={18} color="#8DC63F" />
                 </div>
 
                 <p
                   className="text-xs font-medium uppercase mb-2"
-                  style={{ color: featured ? '#1D9E75' : '#888', letterSpacing: '0.07em' }}
+                  style={{ color: featured ? '#8DC63F' : '#888', letterSpacing: '0.07em' }}
                 >
                   {name}
                 </p>
@@ -88,9 +88,9 @@ export default function Pricing({ content }) {
                     <li key={f} className="flex items-start gap-2.5">
                       <span
                         className="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
-                        style={{ backgroundColor: '#E1F5EE' }}
+                        style={{ backgroundColor: '#EEF7D6' }}
                       >
-                        <Check size={9} color="#1D9E75" />
+                        <Check size={9} color="#8DC63F" />
                       </span>
                       <span className="text-sm text-gray-600">{f}</span>
                     </li>
@@ -103,12 +103,12 @@ export default function Pricing({ content }) {
                   duration={500}
                   offset={-64}
                   className="block text-center text-sm font-medium py-3 rounded-lg cursor-pointer transition-colors duration-200"
-                  style={featured ? { backgroundColor: '#1D9E75', color: '#fff' } : { backgroundColor: '#F3F4F6', color: '#085041' }}
+                  style={featured ? { backgroundColor: '#8DC63F', color: '#fff' } : { backgroundColor: '#F3F4F6', color: '#132744' }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = featured ? '#0F6E56' : '#E5E7EB'
+                    e.currentTarget.style.backgroundColor = featured ? '#1B3461' : '#E5E7EB'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = featured ? '#1D9E75' : '#F3F4F6'
+                    e.currentTarget.style.backgroundColor = featured ? '#8DC63F' : '#F3F4F6'
                   }}
                 >
                   {cta}

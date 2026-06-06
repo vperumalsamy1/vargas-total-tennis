@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { User, Users, Star, Trophy } from 'lucide-react'
 import { Link } from 'react-scroll'
 
 // Visual design (accent colours + icons) maps 1-to-1 with the 4 program items
 const CARD_STYLE = [
-  { accent: '#1D9E75', Icon: User },
-  { accent: '#5DCAA5', Icon: Users },
+  { accent: '#8DC63F', Icon: User },
+  { accent: '#8DC63F', Icon: Users },
   { accent: '#EF9F27', Icon: Star },
   { accent: '#378ADD', Icon: Trophy },
 ]

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 
 function CoachCard({ coach, index }) {
@@ -18,7 +18,7 @@ function CoachCard({ coach, index }) {
       <div className="flex items-center gap-4">
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0"
-          style={{ backgroundColor: '#1D9E75' }}
+          style={{ backgroundColor: '#8DC63F' }}
         >
           <span className="text-lg font-medium text-white" style={{ letterSpacing: '-0.02em' }}>
             {coach.avatar}
@@ -41,9 +41,9 @@ function CoachCard({ coach, index }) {
             key={badge}
             className="text-xs font-medium px-3 py-1 rounded-full"
             style={{
-              backgroundColor: 'rgba(93,202,165,0.12)',
-              color: '#5DCAA5',
-              border: '0.5px solid rgba(93,202,165,0.22)',
+              backgroundColor: 'rgba(141,198,63,0.12)',
+              color: '#8DC63F',
+              border: '0.5px solid rgba(141,198,63,0.22)',
             }}
           >
             {badge}
@@ -74,9 +74,9 @@ function CoachCard({ coach, index }) {
           >
             <span
               className="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
-              style={{ backgroundColor: 'rgba(29,158,117,0.25)' }}
+              style={{ backgroundColor: 'rgba(141,198,63,0.25)' }}
             >
-              <Check size={9} color="#5DCAA5" />
+              <Check size={9} color="#8DC63F" />
             </span>
             <span className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
               {b}
@@ -92,7 +92,7 @@ export default function About({ content }) {
   const { label, heading, coaches } = content
 
   return (
-    <section id="about" className="py-24" style={{ backgroundColor: '#085041' }}>
+    <section id="about" className="py-24" style={{ backgroundColor: '#132744' }}>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section header */}
@@ -103,7 +103,7 @@ export default function About({ content }) {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="section-label mb-4" style={{ color: '#5DCAA5' }}>
+          <p className="section-label mb-4" style={{ color: '#8DC63F' }}>
             {label}
           </p>
           <h2

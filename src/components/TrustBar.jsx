@@ -1,4 +1,4 @@
-import { Award, Trophy, MapPin, CheckCircle2 } from 'lucide-react'
+﻿import { Award, Trophy, MapPin, CheckCircle2 } from 'lucide-react'
 
 // Icons are positional — same order as the trust array in both en.js and es.js
 const ICONS = [Award, Trophy, MapPin, CheckCircle2]
@@ -16,8 +16,8 @@ export default function TrustBar({ content }) {
                 className="flex items-center gap-2.5 px-5 py-2"
                 style={i > 0 ? { borderLeft: '1px solid rgba(0,0,0,0.09)' } : {}}
               >
-                <Icon size={14} className="flex-shrink-0" style={{ color: '#1D9E75' }} />
-                <span className="text-sm font-medium" style={{ color: '#085041' }}>
+                <Icon size={14} className="flex-shrink-0" style={{ color: '#8DC63F' }} />
+                <span className="text-sm font-medium" style={{ color: '#132744' }}>
                   {text}
                 </span>
               </div>

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { MessageSquare } from 'lucide-react'
 
 export default function FloatingCTA({ label }) {
@@ -11,7 +11,7 @@ export default function FloatingCTA({ label }) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
       className="fixed bottom-6 right-6 z-50 flex md:hidden items-center gap-2.5 text-white text-sm font-medium px-5 py-3.5 rounded-full shadow-lg"
-      style={{ backgroundColor: '#1D9E75' }}
+      style={{ backgroundColor: '#8DC63F' }}
       aria-label="Text Coach Nestor"
     >
       <MessageSquare size={16} />

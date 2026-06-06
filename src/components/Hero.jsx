@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { ArrowRight, Phone, Award, Trophy, MapPin, CheckCircle2 } from 'lucide-react'
 
@@ -20,7 +20,7 @@ export default function Hero({ content, trust }) {
     <section
       id="hero"
       className="flex flex-col"
-      style={{ backgroundColor: '#0F6E56', minHeight: '100svh' }}
+      style={{ backgroundColor: '#1B3461', minHeight: '100svh' }}
     >
       {/* ── Main hero content — fills available height ── */}
       <div className="flex-1 flex items-center">
@@ -33,7 +33,7 @@ export default function Hero({ content, trust }) {
               <motion.p
                 variants={itemVariant}
                 className="section-label mb-4"
-                style={{ color: '#5DCAA5' }}
+                style={{ color: '#8DC63F' }}
               >
                 {eyebrow}
               </motion.p>
@@ -50,7 +50,7 @@ export default function Hero({ content, trust }) {
                       <br />
                     </span>
                   ) : (
-                    <span key={i} style={{ color: '#5DCAA5' }}>
+                    <span key={i} style={{ color: '#8DC63F' }}>
                       {line}
                     </span>
                   )
@@ -107,7 +107,7 @@ export default function Hero({ content, trust }) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.25, ease: 'easeOut' }}
               className="rounded-2xl overflow-hidden"
-              style={{ backgroundColor: '#085041' }}
+              style={{ backgroundColor: '#132744' }}
             >
               <div className="p-7 md:p-8">
                 {/* Stats 2×2 */}
@@ -161,7 +161,7 @@ export default function Hero({ content, trust }) {
                   >
                     "{quote.text}"
                   </p>
-                  <p className="text-xs font-medium" style={{ color: '#5DCAA5' }}>
+                  <p className="text-xs font-medium" style={{ color: '#8DC63F' }}>
                     — {quote.attribution}
                   </p>
                 </motion.blockquote>
@@ -189,7 +189,7 @@ export default function Hero({ content, trust }) {
                     className="flex items-center gap-2 px-5 py-2"
                     style={i > 0 ? { borderLeft: '1px solid rgba(255,255,255,0.12)' } : {}}
                   >
-                    {Icon && <Icon size={13} style={{ color: '#5DCAA5', flexShrink: 0 }} />}
+                    {Icon && <Icon size={13} style={{ color: '#8DC63F', flexShrink: 0 }} />}
                     <span className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.65)' }}>
                       {text}
                     </span>

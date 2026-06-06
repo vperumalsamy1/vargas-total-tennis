@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
 
@@ -12,7 +12,7 @@ const cardVariant = {
 }
 
 const baseStyle  = { border: '0.5px solid rgba(0,0,0,0.12)', backgroundColor: '#fff' }
-const focusStyle = { border: '1.5px solid #1D9E75', boxShadow: '0 0 0 3px rgba(29,158,117,0.08)' }
+const focusStyle = { border: '1.5px solid #8DC63F', boxShadow: '0 0 0 3px rgba(141,198,63,0.08)' }
 const baseCls    = 'w-full rounded-lg text-sm text-gray-800 placeholder-gray-400 px-4 py-3 outline-none transition-all duration-200'
 
 function useFocus() {
@@ -72,9 +72,9 @@ function ReviewForm({ rc }) {
       <div className="text-center py-8">
         <div
           className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-          style={{ backgroundColor: '#E1F5EE' }}
+          style={{ backgroundColor: '#EEF7D6' }}
         >
-          <Send size={18} color="#1D9E75" />
+          <Send size={18} color="#8DC63F" />
         </div>
         <h4 className="text-base font-medium text-gray-900 mb-1" style={{ letterSpacing: '-0.01em' }}>
           {rc.success_heading}
@@ -126,9 +126,9 @@ function ReviewForm({ rc }) {
       <button
         type="submit"
         className="w-full text-sm font-medium text-white py-3 rounded-lg transition-colors duration-200"
-        style={{ backgroundColor: '#1D9E75' }}
-        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0F6E56')}
-        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#1D9E75')}
+        style={{ backgroundColor: '#8DC63F' }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1B3461')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#8DC63F')}
       >
         {rc.submit}
       </button>
@@ -224,7 +224,7 @@ export default function Testimonials({ content }) {
             border: '0.5px solid rgba(0,0,0,0.08)',
           }}
         >
-          <p className="section-label mb-2" style={{ color: '#1D9E75' }}>
+          <p className="section-label mb-2" style={{ color: '#8DC63F' }}>
             {rc.label}
           </p>
           <p className="text-sm text-gray-400 mb-6">{rc.subtext}</p>

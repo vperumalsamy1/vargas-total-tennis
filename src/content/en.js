@@ -1,4 +1,4 @@
-export const content = {
+﻿export const content = {
   lang: 'en',
 
   seo: {
@@ -148,7 +148,7 @@ export const content = {
         name: 'Julie H.',
         subtitle: 'Lessons.com · Verified review',
         initials: 'JH',
-        color: '#1D9E75',
+        color: '#8DC63F',
       },
       {
         quote:
@@ -172,7 +172,7 @@ export const content = {
         name: 'Carlos Y F.',
         subtitle: 'Lessons.com · Verified review',
         initials: 'CY',
-        color: '#1D9E75',
+        color: '#8DC63F',
       },
       {
         quote:

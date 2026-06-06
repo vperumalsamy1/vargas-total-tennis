@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+﻿import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { content as en } from './content/en'
 import { content as es } from './content/es'
 import PageHead from './components/PageHead'

@@ -1,6 +1,6 @@
-import { Link } from 'react-scroll'
+﻿import { Link } from 'react-scroll'
 import { NavLink, useLocation } from 'react-router-dom'
-import logoWhite from '../assets/logo-white.svg'
+import logoColor from '../assets/logo-color.png'
 
 // Nav links come from content so they're translated in /es
 export default function Footer({ content }) {
@@ -31,7 +31,7 @@ export default function Footer({ content }) {
   const hoverLink = { color: '#fff' }
 
   return (
-    <footer style={{ backgroundColor: '#085041' }}>
+    <footer style={{ backgroundColor: '#132744' }}>
       <div className="max-w-7xl mx-auto px-6 py-12">
 
         {/* Top row */}
@@ -41,7 +41,9 @@ export default function Footer({ content }) {
         >
           {/* Logo + tagline */}
           <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-            <img src={logoWhite} alt="Vargas Total Tennis" className="h-10 w-auto" />
+            <div className="bg-white rounded-lg px-3 py-1.5 inline-block">
+              <img src={logoColor} alt="Vargas Total Tennis" className="h-8 w-auto" />
+            </div>
             <p className="text-sm max-w-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {tagline}
             </p>
@@ -83,7 +85,7 @@ export default function Footer({ content }) {
               <NavLink
                 to="/"
                 className="hover:opacity-80 transition-opacity"
-                style={{ color: !isSpanish ? '#5DCAA5' : 'rgba(255,255,255,0.3)', fontWeight: !isSpanish ? 500 : 400 }}
+                style={{ color: !isSpanish ? '#8DC63F' : 'rgba(255,255,255,0.3)', fontWeight: !isSpanish ? 500 : 400 }}
               >
                 EN
               </NavLink>
@@ -91,7 +93,7 @@ export default function Footer({ content }) {
               <NavLink
                 to="/es"
                 className="hover:opacity-80 transition-opacity"
-                style={{ color: isSpanish ? '#5DCAA5' : 'rgba(255,255,255,0.3)', fontWeight: isSpanish ? 500 : 400 }}
+                style={{ color: isSpanish ? '#8DC63F' : 'rgba(255,255,255,0.3)', fontWeight: isSpanish ? 500 : 400 }}
               >
                 ES
               </NavLink>
