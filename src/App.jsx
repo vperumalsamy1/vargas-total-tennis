@@ -35,8 +35,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"   element={<Site content={en} />} />
-        <Route path="/es" element={<Site content={es} />} />
+        <Route path="/"   element={<Site key="en" content={en} />} />
+        <Route path="/es" element={<Site key="es" content={es} />} />
       </Routes>
     </BrowserRouter>
   )
