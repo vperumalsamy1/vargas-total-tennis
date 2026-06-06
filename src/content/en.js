@@ -241,7 +241,7 @@
     details: [
       'Tampa Bay, FL · Multiple locations',
       '(864) 431-2442',
-      'tennisvargas17@hotmail.com',
+      'nestor@vargastotaltennis.com',
       'Mon–Sat · 7 am to 7 pm',
       '@vargastotaltennis',
     ],
