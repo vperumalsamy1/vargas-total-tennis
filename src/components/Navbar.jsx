@@ -69,13 +69,11 @@ export default function Navbar({ content }) {
 
         {/* Logo */}
         <ScrollLink to="hero" smooth duration={500} className="cursor-pointer flex-shrink-0">
-          <div className={scrolled ? '' : 'bg-white rounded-xl px-3 py-1.5 shadow-sm'}>
-            <img
-              src={logoColor}
-              alt="Vargas Total Tennis"
-              className="h-11 w-auto"
-            />
-          </div>
+          <img
+            src={logoColor}
+            alt="Vargas Total Tennis"
+            className="h-11 w-auto"
+          />
         </ScrollLink>
 
         {/* Desktop nav links */}
