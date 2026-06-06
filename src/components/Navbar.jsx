@@ -6,18 +6,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import logoColor from '../assets/logo-color.png'
 
 // Small EN | ES pill toggle — reads current route to highlight active lang
-function LangToggle({ scrolled, inDrawer = false }) {
+function LangToggle() {
   const { pathname } = useLocation()
   const isSpanish = pathname === '/es'
 
   const activeStyle   = { color: '#8DC63F', fontWeight: 500 }
-  const inactiveStyle = inDrawer
-    ? { color: '#9ca3af' }
-    : scrolled
-    ? { color: '#9ca3af' }
-    : { color: 'rgba(255,255,255,0.45)' }
-
-  const sep = inDrawer || scrolled ? '#d1d5db' : 'rgba(255,255,255,0.2)'
+  const inactiveStyle = { color: '#9ca3af' }
+  const sep = '#d1d5db'
 
   return (
     <div className="flex items-center gap-0.5 text-sm select-none">
@@ -55,14 +50,12 @@ export default function Navbar({ content }) {
   const { pathname } = useLocation()
   useEffect(() => setMenuOpen(false), [pathname])
 
-  const linkClass = `text-sm font-medium cursor-pointer transition-colors duration-200 ${
-    scrolled ? 'text-gray-700 hover:text-vtt-primary' : 'text-white/90 hover:text-white'
-  }`
+  const linkClass = 'text-sm font-medium cursor-pointer transition-colors duration-200 text-gray-700 hover:text-vtt-primary'
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white border-b border-black/[0.08]' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? 'border-b border-black/[0.08] shadow-sm' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
@@ -72,7 +65,7 @@ export default function Navbar({ content }) {
           <img
             src={logoColor}
             alt="Vargas Total Tennis"
-            className={`h-14 w-auto transition-all duration-300 ${scrolled ? '' : 'rounded-xl'}`}
+            className="h-14 w-auto"
           />
         </ScrollLink>
 
@@ -94,7 +87,7 @@ export default function Navbar({ content }) {
 
         {/* Desktop: lang toggle + CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <LangToggle scrolled={scrolled} />
+          <LangToggle />
           <ScrollLink
             to="contact"
             smooth
@@ -109,9 +102,7 @@ export default function Navbar({ content }) {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen((o) => !o)}
-          className={`md:hidden p-2 rounded-md transition-colors ${
-            scrolled ? 'text-gray-700' : 'text-white'
-          }`}
+          className="md:hidden p-2 rounded-md transition-colors text-gray-700"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -148,7 +139,7 @@ export default function Navbar({ content }) {
                 <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
                   Language
                 </span>
-                <LangToggle scrolled inDrawer />
+                <LangToggle />
               </div>
 
               <ScrollLink
