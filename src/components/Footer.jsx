@@ -34,20 +34,15 @@ export default function Footer({ content }) {
     <footer style={{ backgroundColor: '#132744' }}>
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* Top row */}
+        {/* Top row — tagline + nav links */}
         <div
           className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 pb-10 border-b"
           style={{ borderColor: 'rgba(255,255,255,0.1)' }}
         >
-          {/* Logo + tagline */}
-          <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-            <img src={logoFooter} alt="Vargas Total Tennis" className="h-16 w-auto" />
-            <p className="text-sm max-w-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              {tagline}
-            </p>
-          </div>
+          <p className="text-sm max-w-xs text-center md:text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            {tagline}
+          </p>
 
-          {/* Nav links */}
           <nav className="flex flex-wrap justify-center md:justify-end gap-x-7 gap-y-3">
             {footerLinks.map(({ label, to }) => (
               <Link
@@ -67,18 +62,17 @@ export default function Footer({ content }) {
           </nav>
         </div>
 
-        {/* Bottom row */}
+        {/* Bottom row — logo stamp + copyright left, domain + lang right */}
         <div
           className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs"
           style={{ color: 'rgba(255,255,255,0.35)' }}
         >
-          <p>{copyright}</p>
+          <div className="flex items-center gap-3">
+            <img src={logoFooter} alt="Vargas Total Tennis" className="h-8 w-auto rounded-md" />
+            <p>{copyright}</p>
+          </div>
           <div className="flex items-center gap-4">
-            <p>
-              {domain}{' '}
-              <span style={{ color: 'rgba(255,255,255,0.2)' }}>{domain_note}</span>
-            </p>
-            {/* Language switcher in footer */}
+            <p>{domain}</p>
             <div className="flex items-center gap-1">
               <NavLink
                 to="/"
