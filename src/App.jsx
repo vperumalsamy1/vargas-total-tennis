@@ -11,6 +11,7 @@ import Pricing from './components/Pricing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingCTA from './components/FloatingCTA'
+import Waiver from './components/Waiver'
 
 // Renders the full page with the given content object.
 // Shared by both / (English) and /es (Spanish) routes.
@@ -35,8 +36,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"   element={<Site key="en" content={en} />} />
-        <Route path="/es" element={<Site key="es" content={es} />} />
+        <Route path="/"       element={<Site key="en" content={en} />} />
+        <Route path="/es"     element={<Site key="es" content={es} />} />
+        <Route path="/waiver"    element={<Waiver lang="en" />} />
+        <Route path="/es/waiver" element={<Waiver lang="es" />} />
       </Routes>
     </BrowserRouter>
   )
