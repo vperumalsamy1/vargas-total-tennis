@@ -62,20 +62,20 @@
         cta: 'Book a session',
       },
       {
-        title: 'Group Clinics',
+        title: 'After-School & Homeschool Clinics',
         description:
-          'High-energy group sessions with structured drills. Every Tuesday (ages 6–10 at 3:20 pm · 11+ at 4:05 pm) and Thursday (ages 7+ at 9:15 am) at Tampa locations. Contribute what you can.',
-        price: 'Donation-based',
+          'Weekday clinics at three Tampa parks — Mon at Country Place Park (ages 6–8 at 5:00 pm · 9+ at 5:45 pm), Tue at West Village Park (ages 6–10 at 3:20 pm · 11+ at 4:05 pm), Thu at Hampton Park (ages 7+ at 9:15 am). Donate what you can.',
+        price: 'Donate What You Can',
         priceNote: '',
         cta: 'Reserve your spot',
       },
       {
-        title: 'Summer Camps',
+        title: 'Saturday Clinics',
         description:
-          'Ten weeks of tennis fun at Country Place Park — June 1 through August 7, 2026. Monday, Wednesday, and Saturday sessions for ages 6–8 and 9+. Limited spots available.',
-        price: 'June 1 – Aug 7',
+          'Weekend sessions at Country Place Park (15728 Country Lake Dr.) — Adult Clinic at 8:00 am, ages 6–8 at 9:00 am, ages 9+ at 9:45 am–11:00 am. All levels welcome. Donate what you can.',
+        price: 'Donate What You Can',
         priceNote: '',
-        cta: 'Register now',
+        cta: 'Reserve your spot',
       },
       {
         title: 'Tournament Prep',
@@ -217,13 +217,13 @@
       {
         name: 'Group Clinics',
         icon: 'users',
-        description: 'Structured group sessions at multiple Tampa locations every Tuesday and Thursday.',
+        description: 'Structured group sessions at multiple Tampa locations every Monday, Tuesday, Thursday, and Saturday.',
         features: [
-          'Tuesday & Thursday sessions',
+          'Mon, Tue, Thu & Sat sessions',
           'Multiple Tampa locations',
-          'Ages 6 and up',
+          'Ages 6 and up · Adults too',
           'Innovative drills + match play',
-          'Contribute what you can',
+          'Donate what you can',
           'Fun, high-energy environment',
         ],
         cta: 'Contact for details',

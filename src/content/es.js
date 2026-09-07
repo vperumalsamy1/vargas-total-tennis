@@ -62,20 +62,20 @@
         cta: 'Reservar clase',
       },
       {
-        title: 'Clínicas Grupales',
+        title: 'Clínicas Extraescolares y Homeschool',
         description:
-          'Sesiones grupales de alta energía con ejercicios estructurados. Todos los martes (edades 6–10 a las 3:20 pm · 11+ a las 4:05 pm) y jueves (edades 7+ a las 9:15 am). Contribuye lo que puedas.',
+          'Clínicas entre semana en tres parques de Tampa — lun en Country Place Park (edades 6–8 a las 5:00 pm · 9+ a las 5:45 pm), mar en West Village Park (edades 6–10 a las 3:20 pm · 11+ a las 4:05 pm), jue en Hampton Park (edades 7+ a las 9:15 am). Dona lo que puedas.',
         price: 'Donación voluntaria',
         priceNote: '',
         cta: 'Reservar lugar',
       },
       {
-        title: 'Campamento de Verano',
+        title: 'Clínicas del Sábado',
         description:
-          'Diez semanas de tenis en Country Place Park — del 1 de junio al 7 de agosto de 2026. Sesiones lunes, miércoles y sábados para edades 6–8 y 9+. Cupos limitados.',
-        price: '1 jun – 7 ago',
+          'Sesiones de fin de semana en Country Place Park (15728 Country Lake Dr.) — Clínica para adultos a las 8:00 am, edades 6–8 a las 9:00 am, edades 9+ a las 9:45 am–11:00 am. Todos los niveles bienvenidos. Dona lo que puedas.',
+        price: 'Donación voluntaria',
         priceNote: '',
-        cta: 'Registrarse ahora',
+        cta: 'Reservar lugar',
       },
       {
         title: 'Preparación para Torneos',
@@ -217,13 +217,13 @@
       {
         name: 'Clínicas Grupales',
         icon: 'users',
-        description: 'Sesiones grupales estructuradas en múltiples ubicaciones en Tampa, todos los martes y jueves.',
+        description: 'Sesiones grupales estructuradas en múltiples ubicaciones en Tampa, todos los lunes, martes, jueves y sábados.',
         features: [
-          'Sesiones los martes y jueves',
+          'Sesiones lun, mar, jue y sáb',
           'Múltiples ubicaciones en Tampa',
-          'Edades a partir de 6 años',
+          'Edades 6+ · Adultos también',
           'Ejercicios innovadores + partidos',
-          'Contribuye lo que puedas',
+          'Dona lo que puedas',
           'Ambiente divertido y dinámico',
         ],
         cta: 'Consultar detalles',
